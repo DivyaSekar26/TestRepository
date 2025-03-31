@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-31T20:51:56 IST" name="Default suite" finished-at="2025-03-31T20:52:20 IST" duration-ms="23848">
+    <groups>
+    </groups>
+    <test started-at="2025-03-31T20:51:56 IST" name="Default test" finished-at="2025-03-31T20:52:20 IST" duration-ms="23848">
+      <class name="testCases.TC006_EditContactTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:51:56 IST" name="setUp" finished-at="2025-03-31T20:52:02 IST" duration-ms="5832" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:02 IST" name="setup" finished-at="2025-03-31T20:52:03 IST" duration-ms="547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="clickContactDetail()[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:03 IST" name="clickContactDetail" finished-at="2025-03-31T20:52:07 IST" duration-ms="4057" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickContactDetail -->
+        <test-method signature="verifyPageRedirectContact()[pri:1, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:07 IST" name="verifyPageRedirectContact" finished-at="2025-03-31T20:52:08 IST" duration-ms="1215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageRedirectContact -->
+        <test-method is-config="true" signature="clickContactDetail()[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:08 IST" name="clickContactDetail" finished-at="2025-03-31T20:52:10 IST" duration-ms="1819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickContactDetail -->
+        <test-method signature="verifyEditContactDetails()[pri:2, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:10 IST" name="verifyEditContactDetails" finished-at="2025-03-31T20:52:16 IST" duration-ms="5735" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEditContactDetails -->
+        <test-method is-config="true" signature="clickContactDetail()[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:16 IST" name="clickContactDetail" finished-at="2025-03-31T20:52:17 IST" duration-ms="1743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickContactDetail -->
+        <test-method signature="verifySaveEmptyFields()[pri:3, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:17 IST" name="verifySaveEmptyFields" finished-at="2025-03-31T20:52:20 IST" duration-ms="2678" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySaveEmptyFields -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:20 IST" name="tearDown" finished-at="2025-03-31T20:52:20 IST" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC006_EditContactTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
