@@ -1,0 +1,14 @@
+testCases\TC003_AddContactTest.class
+testCases\TC004_DeleteContactTest.class
+pageObjects\MyContactsPage.class
+pageObjects\EditContactPage.class
+pageObjects\HomePage.class
+testBase\BaseClass.class
+pageObjects\AddContact.class
+testCases\TC002_SignUpTest.class
+testCases\TC005_ContactDisplayTest.class
+pageObjects\BasePage.class
+testCases\TC001_LoginTest.class
+testCases\TC006_EditContactTest.class
+testCases\TC007_LogoutTest.class
+pageObjects\ContactDetails.class

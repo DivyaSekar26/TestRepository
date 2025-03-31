@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testCases.TC005_ContactDisplayTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyAddedContact"/>
+        </methods>
+      </class> <!-- testCases.TC005_ContactDisplayTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="5" name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testCases.TC006_EditContactTest">
+        <methods>
+          <include name="clickContactDetail"/>
+          <include name="verifyEditContactDetails"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.TC006_EditContactTest -->
+      <class name="testCases.TC004_DeleteContactTest">
+        <methods>
+          <include name="isAlertComingForDelete"/>
+          <include name="tearDown"/>
+          <include name="verifyDeleteContact"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.TC004_DeleteContactTest -->
+      <class name="testCases.TC003_AddContactTest">
+        <methods>
+          <include name="verifyAddAllFields"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="navigateToAddContact"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.TC003_AddContactTest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

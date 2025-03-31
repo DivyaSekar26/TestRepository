@@ -1,0 +1,14 @@
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\pageObjects\AddContact.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\pageObjects\BasePage.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\pageObjects\ContactDetails.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\pageObjects\EditContactPage.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\pageObjects\HomePage.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\pageObjects\MyContactsPage.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\testBase\BaseClass.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\testCases\TC001_LoginTest.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\testCases\TC002_SignUpTest.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\testCases\TC003_AddContactTest.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\testCases\TC004_DeleteContactTest.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\testCases\TC005_ContactDisplayTest.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\testCases\TC006_EditContactTest.java
+C:\Users\Welcome\OneDrive\JAT_Mini_Project2\ContactListApp\src\test\java\testCases\TC007_LogoutTest.java
