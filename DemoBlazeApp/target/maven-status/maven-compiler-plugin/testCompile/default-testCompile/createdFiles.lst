@@ -1,0 +1,13 @@
+testCases\TC004_ProductCategoryDisplayTest.class
+testCases\TC006_PurchaseTest.class
+testCases\TC003_HomeScreenTest.class
+pageObjects\HomePage.class
+testBase\BaseClass.class
+testCases\TC001_SignUpTest.class
+pageObjects\ProductPage.class
+testCases\TC005_CartTest.class
+testCases\TC002_LoginTest.class
+pageObjects\PlaceOrderPage.class
+pageObjects\BasePage.class
+pageObjects\CartPage.class
+testCases\TC007_LogoutTest.class
