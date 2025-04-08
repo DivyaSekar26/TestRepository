@@ -1,0 +1,46 @@
+18:36:18.599 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
+18:36:19.240 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.price.getText()$650 *includes tax
+18:36:19.270 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.prodDescription.getText()The Motorola Google Nexus 6 is powered by 2.7GHz quad-core Qualcomm Snapdragon 805 processor and it comes with 3GB of RAM.
+18:36:19.323 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyAddToCart test method
+18:36:23.756 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Product added.
+18:37:08.492 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyClickProduct test method
+18:37:09.373 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
+18:37:09.957 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.price.getText()$650 *includes tax
+18:37:09.990 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.prodDescription.getText()The Motorola Google Nexus 6 is powered by 2.7GHz quad-core Qualcomm Snapdragon 805 processor and it comes with 3GB of RAM.
+18:37:10.085 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyAddToCart test method
+18:37:15.301 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Product added.
+18:39:46.084 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyClickProduct test method
+18:39:46.928 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
+18:39:47.493 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.price.getText()$650 *includes tax
+18:39:47.523 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.prodDescription.getText()The Motorola Google Nexus 6 is powered by 2.7GHz quad-core Qualcomm Snapdragon 805 processor and it comes with 3GB of RAM.
+18:39:47.589 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyAddToCart test method
+18:39:52.037 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Product added.
+18:45:59.667 [main] INFO  testCases.TC006_PurchaseTest - Inside verifyPageRedirect test method
+18:46:00.476 [main] INFO  testCases.TC006_PurchaseTest - Inside verifyPurchase test method
+18:48:04.749 [main] INFO  testCases.TC007_LogoutTest - Inside verifyLogOutvisible test method
+18:48:04.840 [main] INFO  testCases.TC007_LogoutTest - Inside verifyLogoutRedirect test method
+18:50:51.286 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyClickProduct test method
+18:50:53.880 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
+18:51:23.943 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyAddToCart test method
+18:52:00.946 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Product added.
+18:53:32.996 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyClickProduct test method
+18:53:34.741 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
+18:54:04.765 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyAddToCart test method
+18:54:10.780 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Product added.
+18:55:33.870 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyClickProduct test method
+18:55:34.954 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
+18:56:13.588 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyClickProduct test method
+18:56:14.589 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
+18:56:44.635 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyAddToCart test method
+18:56:50.672 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Product added.
+19:05:07.814 [main] INFO  testCases.TC001_SignUpTest - Inside btnSignUpVisible test method
+19:05:08.448 [main] INFO  testCases.TC001_SignUpTest - Inside btnSignUpClcikable test method
+19:05:08.850 [main] INFO  testCases.TC001_SignUpTest - Inside verifySignUpBtn test method
+19:05:24.523 [main] INFO  testCases.TC002_LoginTest - Inside verifyLoginVisible test method
+19:05:24.665 [main] INFO  testCases.TC002_LoginTest - Inside verifyLoginClickable test method
+19:05:24.719 [main] INFO  testCases.TC002_LoginTest - Inside verifyLogin test method
+19:05:35.652 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyAllMenuDisplay test method
+19:05:37.471 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyAllCategories test method
+19:05:37.597 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyLogo test method
+19:05:46.779 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyClickProduct test method
+19:05:47.806 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
