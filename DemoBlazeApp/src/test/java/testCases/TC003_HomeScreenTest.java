@@ -28,7 +28,6 @@ public class TC003_HomeScreenTest extends BaseClass {
 		hp=new HomePage(BaseClass.driver);
 		hp.clickLogin(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
 	}
-	
 	@Test(priority=1)
 	public void verifyAllMenuDisplay()
 	{

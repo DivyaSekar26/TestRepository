@@ -33,7 +33,7 @@ public class TC006_PurchaseTest extends BaseClass{
 		cp = new CartPage(BaseClass.driver);
 		pp=new PlaceOrderPage(BaseClass.driver);
 		hp.clickLogin(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		hp.lnkCart.click();
 
 	}

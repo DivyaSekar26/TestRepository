@@ -27,7 +27,7 @@ public class TC007_LogoutTest extends BaseClass{
 		pr.load(fr);
 		hp=new HomePage(BaseClass.driver);
 		hp.clickLogin(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 	}
 
 	@Test(priority=1)

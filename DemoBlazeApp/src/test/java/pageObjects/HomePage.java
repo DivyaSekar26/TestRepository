@@ -69,7 +69,7 @@ public class HomePage extends BasePage {
 		btnLoginHome.click();
 		txtUserName.sendKeys(userName);	
 		txtPassword.sendKeys(password);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		btnLogin.click();
 
 	}

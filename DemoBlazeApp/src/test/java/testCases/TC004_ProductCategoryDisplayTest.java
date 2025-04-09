@@ -37,7 +37,7 @@ public class TC004_ProductCategoryDisplayTest extends BaseClass {
 		pp=new ProductPage(BaseClass.driver);
 		cp=new CartPage(BaseClass.driver);
 		hp.clickLogin(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		
 	}
 	
@@ -92,10 +92,8 @@ public class TC004_ProductCategoryDisplayTest extends BaseClass {
 		products.get(2).click();
 		pp.clickAddtocart();
 		
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(40));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.alertIsPresent());
-		
-		logger.info(driver.switchTo().alert().getText());
 		driver.switchTo().alert().accept();
 		
 		hp.lnkCart.click();

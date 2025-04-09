@@ -28,7 +28,7 @@ public class TC005_CartTest extends BaseClass {
 		hp = new HomePage(BaseClass.driver);
 		cp = new CartPage(BaseClass.driver);
 		hp.clickLogin(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		hp.lnkCart.click();
 
 	}
