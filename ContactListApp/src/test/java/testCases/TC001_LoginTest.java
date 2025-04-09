@@ -26,44 +26,74 @@ public class TC001_LoginTest extends BaseClass {
 	@Test(priority=1)
 	public void isLoginBtnVisible() {
 		boolean loginBtnStatus1 = hp.btnSubmit.isDisplayed();
-		Assert.assertTrue(loginBtnStatus1);
+		if(loginBtnStatus1) 
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
 		takeScreenshot();
+		Assert.fail();
+		}
 	}
 
 	@Test(priority=2)
 	public void isLoginBtnClickable() {
 		boolean loginBtnStatus2 = hp.btnSubmit.isEnabled();
-		Assert.assertTrue(loginBtnStatus2);
-		takeScreenshot();
+		if(loginBtnStatus2)
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 
 	}
 
 	@Test(priority=4)
 	public void verifyLogin() {
 
-		hp.clickSubmit("divya26998@gmail.com", "Divyasekar26@");
+		hp.clickSubmit("xyz_test@gmail.com", "Divya1234");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		String header=cp.contactPageHeader.getText();
 	
-		System.out.println(header);
-		Assert.assertEquals("Contact List", header);
+		logger.info(header);
+		if( header.equals("Contact List"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 	}
 	
 	@Test(priority=3)
 	public void verifyInvalidLogin()
 	{
-		hp.clickSubmit("divya26998@gmail.com", "divya");
+		hp.clickSubmit("xyz_test@gmail.com", "divya");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
 		String errorText=hp.txtError.getText();
 		logger.info(errorText);
-		Assert.assertEquals("Incorrect username or password", errorText);
+		if( errorText.equals("Incorrect username or password"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 		takeScreenshot();
 		
 	}
 	
 	@AfterClass
 	public void tearDown() {
-	driver.close();		
+	driver.quit();		
 	}
 
 

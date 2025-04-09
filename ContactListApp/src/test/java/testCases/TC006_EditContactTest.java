@@ -31,7 +31,7 @@ public class TC006_EditContactTest extends BaseClass {
 	@BeforeClass
 	public void setup() {
 		hp = new HomePage(BaseClass.driver);
-		hp.clickSubmit("divya26998@gmail.com", "Divyasekar26@"); 
+		hp.clickSubmit("xyz_test@gmail.com", "Divya1234"); 
 		ac = new AddContact(BaseClass.driver);
 		mcp = new MyContactsPage(BaseClass.driver);
 		cd = new ContactDetails(BaseClass.driver);
@@ -45,8 +45,16 @@ public class TC006_EditContactTest extends BaseClass {
 
 	@Test(priority = 1)
 	public void verifyPageRedirectContact() {
-		Assert.assertEquals(cd.headerContactDtls.getText(), "Contact Details");
-		cd.clickReturnBtn();
+		if(cd.headerContactDtls.getText().equals( "Contact Details"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+			cd.clickReturnBtn();
 	}
 
 	@Test(priority = 2)
@@ -76,7 +84,15 @@ public class TC006_EditContactTest extends BaseClass {
 		
 		WebElement txtEmail=wait.until(ExpectedConditions.visibilityOf(cd.txtEmail));
 		
-		Assert.assertEquals(txtEmail.getText(), "divya988@gmail.com");
+		if(txtEmail.getText().equals("divya988@gmail.com"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 		takeScreenshot();
 		cd.clickReturnBtn();
 	}
@@ -95,15 +111,25 @@ public class TC006_EditContactTest extends BaseClass {
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		firstName.clear();
+		firstName.clear();
 		firstName.sendKeys("");
 
+		lastName.clear();
 		lastName.clear();
 		lastName.sendKeys("");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
 		js.executeScript("arguments[0].click();", ecd.btnSubmit);
 		waitForElement(ecd.errorMsg);
-		Assert.assertEquals(ecd.errorMsg.getText(), "Validation failed: lastName: Path `lastName` is required., firstName: Path `firstName` is required.");
+		if(ecd.errorMsg.getText().equals("Validation failed: lastName: Path `lastName` is required., firstName: Path `firstName` is required."))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 		
 	}
 	
@@ -114,7 +140,7 @@ public class TC006_EditContactTest extends BaseClass {
 	
 	@AfterClass
 	public void tearDown() {
-	driver.close();		
+	driver.quit();		
 	}
 	
 	

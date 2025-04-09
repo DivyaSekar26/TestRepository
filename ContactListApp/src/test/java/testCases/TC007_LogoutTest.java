@@ -17,7 +17,7 @@ public class TC007_LogoutTest extends BaseClass {
 	@BeforeClass
 	public void setup() {
 		hp = new HomePage(BaseClass.driver);
-		hp.clickSubmit("divya26998@gmail.com", "Divyasekar26@"); 
+		hp.clickSubmit("xyz_test@gmail.com", "Divya1234"); 
 		mcp = new MyContactsPage(BaseClass.driver);
 
 	}
@@ -25,19 +25,35 @@ public class TC007_LogoutTest extends BaseClass {
 	@Test(priority=1)
 	public void verifyBtnLogoutVisible()
 	{
-		Assert.assertTrue(mcp.btnLogout.isDisplayed());
+		if(mcp.btnLogout.isDisplayed())
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 	}
 	
 	@Test(priority=2 , dependsOnMethods= {"verifyBtnLogoutVisible"})
 	public void verifyBtnLogout()
 	{
 		mcp.btnLogout.click();
-		Assert.assertEquals("Contact List App", driver.getTitle());
+		if(driver.getTitle().equals("Contact List App"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 	}
 	
 	@AfterClass
 	public void tearDown() {
-	driver.close();		
+	driver.quit();		
 	}
 	
 

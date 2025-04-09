@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="21" passed="21" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-31T20:51:56 IST" name="Default suite" finished-at="2025-03-31T20:52:20 IST" duration-ms="23848">
+  <suite started-at="2025-04-09T21:01:12 IST" name="Suite" finished-at="2025-04-09T21:02:46 IST" duration-ms="93714">
     <groups>
     </groups>
-    <test started-at="2025-03-31T20:51:56 IST" name="Default test" finished-at="2025-03-31T20:52:20 IST" duration-ms="23848">
-      <class name="testCases.TC006_EditContactTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:51:56 IST" name="setUp" finished-at="2025-03-31T20:52:02 IST" duration-ms="5832" status="PASS">
+    <test started-at="2025-04-09T21:01:12 IST" name="ChromeTest" finished-at="2025-04-09T21:02:46 IST" duration-ms="93714">
+      <class name="testCases.TC001_LoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC001_LoginTest@3c9754d8]" started-at="2025-04-09T21:01:12 IST" name="setUp" finished-at="2025-04-09T21:01:20 IST" duration-ms="7728" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,39 +18,253 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:02 IST" name="setup" finished-at="2025-03-31T20:52:03 IST" duration-ms="547" status="PASS">
+        <test-method is-config="true" signature="initElements()[pri:0, instance:testCases.TC001_LoginTest@3c9754d8]" started-at="2025-04-09T21:01:20 IST" name="initElements" finished-at="2025-04-09T21:01:20 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initElements -->
+        <test-method signature="isLoginBtnVisible()[pri:1, instance:testCases.TC001_LoginTest@3c9754d8]" started-at="2025-04-09T21:01:20 IST" name="isLoginBtnVisible" finished-at="2025-04-09T21:01:20 IST" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isLoginBtnVisible -->
+        <test-method signature="isLoginBtnClickable()[pri:2, instance:testCases.TC001_LoginTest@3c9754d8]" started-at="2025-04-09T21:01:20 IST" name="isLoginBtnClickable" finished-at="2025-04-09T21:01:20 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isLoginBtnClickable -->
+        <test-method signature="verifyInvalidLogin()[pri:3, instance:testCases.TC001_LoginTest@3c9754d8]" started-at="2025-04-09T21:01:20 IST" name="verifyInvalidLogin" finished-at="2025-04-09T21:01:21 IST" duration-ms="1192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidLogin -->
+        <test-method signature="verifyLogin()[pri:4, instance:testCases.TC001_LoginTest@3c9754d8]" started-at="2025-04-09T21:01:21 IST" name="verifyLogin" finished-at="2025-04-09T21:01:23 IST" duration-ms="1738" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_LoginTest@3c9754d8]" started-at="2025-04-09T21:01:23 IST" name="tearDown" finished-at="2025-04-09T21:01:23 IST" duration-ms="742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC001_LoginTest -->
+      <class name="testCases.TC007_LogoutTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC007_LogoutTest@ba2f4ec]" started-at="2025-04-09T21:02:37 IST" name="setUp" finished-at="2025-04-09T21:02:43 IST" duration-ms="5661" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC007_LogoutTest@ba2f4ec]" started-at="2025-04-09T21:02:43 IST" name="setup" finished-at="2025-04-09T21:02:43 IST" duration-ms="588" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="clickContactDetail()[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:03 IST" name="clickContactDetail" finished-at="2025-03-31T20:52:07 IST" duration-ms="4057" status="PASS">
+        <test-method signature="verifyBtnLogoutVisible()[pri:1, instance:testCases.TC007_LogoutTest@ba2f4ec]" started-at="2025-04-09T21:02:43 IST" name="verifyBtnLogoutVisible" finished-at="2025-04-09T21:02:44 IST" duration-ms="991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBtnLogoutVisible -->
+        <test-method signature="verifyBtnLogout()[pri:2, instance:testCases.TC007_LogoutTest@ba2f4ec]" started-at="2025-04-09T21:02:44 IST" name="verifyBtnLogout" finished-at="2025-04-09T21:02:45 IST" depends-on-methods="testCases.TC007_LogoutTest.verifyBtnLogoutVisible" duration-ms="737" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBtnLogout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC007_LogoutTest@ba2f4ec]" started-at="2025-04-09T21:02:45 IST" name="tearDown" finished-at="2025-04-09T21:02:46 IST" duration-ms="408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC007_LogoutTest -->
+      <class name="testCases.TC002_SignUpTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC002_SignUpTest@26794848]" started-at="2025-04-09T21:01:23 IST" name="setUp" finished-at="2025-04-09T21:01:30 IST" duration-ms="6997" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="initElements()[pri:0, instance:testCases.TC002_SignUpTest@26794848]" started-at="2025-04-09T21:01:30 IST" name="initElements" finished-at="2025-04-09T21:01:30 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initElements -->
+        <test-method signature="verifySignUpVisible()[pri:1, instance:testCases.TC002_SignUpTest@26794848]" started-at="2025-04-09T21:01:30 IST" name="verifySignUpVisible" finished-at="2025-04-09T21:01:31 IST" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpVisible -->
+        <test-method signature="verifySignUpEnabled()[pri:2, instance:testCases.TC002_SignUpTest@26794848]" started-at="2025-04-09T21:01:31 IST" name="verifySignUpEnabled" finished-at="2025-04-09T21:01:31 IST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpEnabled -->
+        <test-method signature="verifySignUpClick()[pri:3, instance:testCases.TC002_SignUpTest@26794848]" started-at="2025-04-09T21:01:31 IST" name="verifySignUpClick" finished-at="2025-04-09T21:01:32 IST" duration-ms="1114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpClick -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC002_SignUpTest@26794848]" started-at="2025-04-09T21:01:32 IST" name="tearDown" finished-at="2025-04-09T21:01:32 IST" duration-ms="745" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC002_SignUpTest -->
+      <class name="testCases.TC006_EditContactTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC006_EditContactTest@2cd76f31]" started-at="2025-04-09T21:02:18 IST" name="setUp" finished-at="2025-04-09T21:02:23 IST" duration-ms="4656" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC006_EditContactTest@2cd76f31]" started-at="2025-04-09T21:02:23 IST" name="setup" finished-at="2025-04-09T21:02:24 IST" duration-ms="693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="clickContactDetail()[pri:0, instance:testCases.TC006_EditContactTest@2cd76f31]" started-at="2025-04-09T21:02:24 IST" name="clickContactDetail" finished-at="2025-04-09T21:02:26 IST" duration-ms="2597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickContactDetail -->
-        <test-method signature="verifyPageRedirectContact()[pri:1, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:07 IST" name="verifyPageRedirectContact" finished-at="2025-03-31T20:52:08 IST" duration-ms="1215" status="PASS">
+        <test-method signature="verifyPageRedirectContact()[pri:1, instance:testCases.TC006_EditContactTest@2cd76f31]" started-at="2025-04-09T21:02:26 IST" name="verifyPageRedirectContact" finished-at="2025-04-09T21:02:27 IST" duration-ms="910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPageRedirectContact -->
-        <test-method is-config="true" signature="clickContactDetail()[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:08 IST" name="clickContactDetail" finished-at="2025-03-31T20:52:10 IST" duration-ms="1819" status="PASS">
+        <test-method is-config="true" signature="clickContactDetail()[pri:0, instance:testCases.TC006_EditContactTest@2cd76f31]" started-at="2025-04-09T21:02:27 IST" name="clickContactDetail" finished-at="2025-04-09T21:02:29 IST" duration-ms="1250" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickContactDetail -->
-        <test-method signature="verifyEditContactDetails()[pri:2, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:10 IST" name="verifyEditContactDetails" finished-at="2025-03-31T20:52:16 IST" duration-ms="5735" status="PASS">
+        <test-method signature="verifyEditContactDetails()[pri:2, instance:testCases.TC006_EditContactTest@2cd76f31]" started-at="2025-04-09T21:02:29 IST" name="verifyEditContactDetails" finished-at="2025-04-09T21:02:33 IST" duration-ms="4395" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEditContactDetails -->
-        <test-method is-config="true" signature="clickContactDetail()[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:16 IST" name="clickContactDetail" finished-at="2025-03-31T20:52:17 IST" duration-ms="1743" status="PASS">
+        <test-method is-config="true" signature="clickContactDetail()[pri:0, instance:testCases.TC006_EditContactTest@2cd76f31]" started-at="2025-04-09T21:02:33 IST" name="clickContactDetail" finished-at="2025-04-09T21:02:34 IST" duration-ms="1052" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickContactDetail -->
-        <test-method signature="verifySaveEmptyFields()[pri:3, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:17 IST" name="verifySaveEmptyFields" finished-at="2025-03-31T20:52:20 IST" duration-ms="2678" status="PASS">
+        <test-method signature="verifySaveEmptyFields()[pri:3, instance:testCases.TC006_EditContactTest@2cd76f31]" started-at="2025-04-09T21:02:34 IST" name="verifySaveEmptyFields" finished-at="2025-04-09T21:02:36 IST" duration-ms="2419" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySaveEmptyFields -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC006_EditContactTest@3fc2959f]" started-at="2025-03-31T20:52:20 IST" name="tearDown" finished-at="2025-03-31T20:52:20 IST" duration-ms="136" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC006_EditContactTest@2cd76f31]" started-at="2025-04-09T21:02:36 IST" name="tearDown" finished-at="2025-04-09T21:02:37 IST" duration-ms="708" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases.TC006_EditContactTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testCases.TC003_AddContactTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:32 IST" name="setUp" finished-at="2025-04-09T21:01:37 IST" duration-ms="4942" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:37 IST" name="setup" finished-at="2025-04-09T21:01:38 IST" duration-ms="727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="navigateToAddContact()[pri:0, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:38 IST" name="navigateToAddContact" finished-at="2025-04-09T21:01:40 IST" duration-ms="1926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToAddContact -->
+        <test-method signature="verifyAddAllFields()[pri:1, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:40 IST" name="verifyAddAllFields" finished-at="2025-04-09T21:01:43 IST" duration-ms="2853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddAllFields -->
+        <test-method is-config="true" signature="navigateToAddContact()[pri:0, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:43 IST" name="navigateToAddContact" finished-at="2025-04-09T21:01:44 IST" duration-ms="777" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToAddContact -->
+        <test-method signature="verifyAddDuplicateFields()[pri:2, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:44 IST" name="verifyAddDuplicateFields" finished-at="2025-04-09T21:01:47 IST" duration-ms="3450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddDuplicateFields -->
+        <test-method is-config="true" signature="navigateToAddContact()[pri:0, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:47 IST" name="navigateToAddContact" finished-at="2025-04-09T21:01:48 IST" duration-ms="893" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToAddContact -->
+        <test-method signature="verifyInvalidDOBFormat()[pri:3, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:48 IST" name="verifyInvalidDOBFormat" finished-at="2025-04-09T21:01:52 IST" duration-ms="4010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidDOBFormat -->
+        <test-method is-config="true" signature="navigateToAddContact()[pri:0, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:52 IST" name="navigateToAddContact" finished-at="2025-04-09T21:01:53 IST" duration-ms="898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToAddContact -->
+        <test-method signature="verifyAddWoOptionalFields()[pri:4, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:53 IST" name="verifyAddWoOptionalFields" finished-at="2025-04-09T21:01:56 IST" duration-ms="3509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddWoOptionalFields -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC003_AddContactTest@302552ec]" started-at="2025-04-09T21:01:56 IST" name="tearDown" finished-at="2025-04-09T21:01:57 IST" duration-ms="757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC003_AddContactTest -->
+      <class name="testCases.TC005_ContactDisplayTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC005_ContactDisplayTest@40005471]" started-at="2025-04-09T21:02:09 IST" name="setUp" finished-at="2025-04-09T21:02:15 IST" duration-ms="5877" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC005_ContactDisplayTest@40005471]" started-at="2025-04-09T21:02:15 IST" name="setup" finished-at="2025-04-09T21:02:16 IST" duration-ms="675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddedContact()[pri:1, instance:testCases.TC005_ContactDisplayTest@40005471]" started-at="2025-04-09T21:02:16 IST" name="verifyAddedContact" finished-at="2025-04-09T21:02:18 IST" duration-ms="1646" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddedContact -->
+        <test-method signature="verifyPhoneNumberExtensions()[pri:2, instance:testCases.TC005_ContactDisplayTest@40005471]" started-at="2025-04-09T21:02:18 IST" name="verifyPhoneNumberExtensions" finished-at="2025-04-09T21:02:18 IST" duration-ms="280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPhoneNumberExtensions -->
+        <test-method signature="verifySortLastName()[pri:3, instance:testCases.TC005_ContactDisplayTest@40005471]" started-at="2025-04-09T21:02:18 IST" name="verifySortLastName" finished-at="2025-04-09T21:02:18 IST" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySortLastName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC005_ContactDisplayTest@40005471]" started-at="2025-04-09T21:02:18 IST" name="tearDown" finished-at="2025-04-09T21:02:18 IST" duration-ms="485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC005_ContactDisplayTest -->
+      <class name="testCases.TC004_DeleteContactTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:testCases.TC004_DeleteContactTest@3d285d7e]" started-at="2025-04-09T21:01:57 IST" name="setUp" finished-at="2025-04-09T21:02:03 IST" duration-ms="5574" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.TC004_DeleteContactTest@3d285d7e]" started-at="2025-04-09T21:02:03 IST" name="setup" finished-at="2025-04-09T21:02:04 IST" duration-ms="840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="isAlertComingForDelete()[pri:1, instance:testCases.TC004_DeleteContactTest@3d285d7e]" started-at="2025-04-09T21:02:04 IST" name="isAlertComingForDelete" finished-at="2025-04-09T21:02:06 IST" duration-ms="2496" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isAlertComingForDelete -->
+        <test-method signature="verifyDeleteContact()[pri:2, instance:testCases.TC004_DeleteContactTest@3d285d7e]" started-at="2025-04-09T21:02:06 IST" name="verifyDeleteContact" finished-at="2025-04-09T21:02:09 IST" duration-ms="2513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteContact -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC004_DeleteContactTest@3d285d7e]" started-at="2025-04-09T21:02:09 IST" name="tearDown" finished-at="2025-04-09T21:02:09 IST" duration-ms="632" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC004_DeleteContactTest -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- Suite -->
 </testng-results>

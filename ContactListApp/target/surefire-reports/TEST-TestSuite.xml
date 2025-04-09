@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="104.515" tests="19" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="179.334" tests="21" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.11+7-LTS-207"/>
@@ -58,23 +58,25 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="isLoginBtnVisible" classname="testCases.TC001_LoginTest" time="1.05"/>
-  <testcase name="isLoginBtnClickable" classname="testCases.TC001_LoginTest" time="0.207"/>
-  <testcase name="verifyInvalidLogin" classname="testCases.TC001_LoginTest" time="1.801"/>
-  <testcase name="verifyLogin" classname="testCases.TC001_LoginTest" time="2.466"/>
-  <testcase name="verifySignUpVisible" classname="testCases.TC002_SignUpTest" time="0.045"/>
-  <testcase name="verifySignUpEnabled" classname="testCases.TC002_SignUpTest" time="0.039"/>
-  <testcase name="verifySignUpClick" classname="testCases.TC002_SignUpTest" time="0.792"/>
-  <testcase name="verifyAddAllFields" classname="testCases.TC003_AddContactTest" time="2.236"/>
-  <testcase name="verifyAddDuplicateFields" classname="testCases.TC003_AddContactTest" time="2.449"/>
-  <testcase name="verifyInvalidDOBFormat" classname="testCases.TC003_AddContactTest" time="4.953"/>
-  <testcase name="verifyAddWoOptionalFields" classname="testCases.TC003_AddContactTest" time="1.478"/>
-  <testcase name="isAlertComingForDelete" classname="testCases.TC004_DeleteContactTest" time="2.454"/>
-  <testcase name="verifyDeleteContact" classname="testCases.TC004_DeleteContactTest" time="2.594"/>
-  <testcase name="verifyAddedContact" classname="testCases.TC005_ContactDisplayTest" time="1.541"/>
-  <testcase name="verifyPhoneNumberExtensions" classname="testCases.TC005_ContactDisplayTest" time="2.187"/>
-  <testcase name="verifyPageRedirectContact" classname="testCases.TC006_EditContactTest" time="1.106"/>
-  <testcase name="verifyEditContactDetails" classname="testCases.TC006_EditContactTest" time="3.059"/>
-  <testcase name="verifyBtnLogoutVisible" classname="testCases.TC007_LogoutTest" time="1.89"/>
-  <testcase name="verifyBtnLogout" classname="testCases.TC007_LogoutTest" time="2.059"/>
+  <testcase name="isLoginBtnVisible" classname="testCases.TC001_LoginTest" time="0.144"/>
+  <testcase name="isLoginBtnClickable" classname="testCases.TC001_LoginTest" time="0.188"/>
+  <testcase name="verifyInvalidLogin" classname="testCases.TC001_LoginTest" time="1.932"/>
+  <testcase name="verifyLogin" classname="testCases.TC001_LoginTest" time="1.967"/>
+  <testcase name="verifySignUpVisible" classname="testCases.TC002_SignUpTest" time="0.096"/>
+  <testcase name="verifySignUpEnabled" classname="testCases.TC002_SignUpTest" time="0.055"/>
+  <testcase name="verifySignUpClick" classname="testCases.TC002_SignUpTest" time="1.049"/>
+  <testcase name="verifyAddAllFields" classname="testCases.TC003_AddContactTest" time="3.494"/>
+  <testcase name="verifyAddDuplicateFields" classname="testCases.TC003_AddContactTest" time="5.694"/>
+  <testcase name="verifyInvalidDOBFormat" classname="testCases.TC003_AddContactTest" time="4.375"/>
+  <testcase name="verifyAddWoOptionalFields" classname="testCases.TC003_AddContactTest" time="4.08"/>
+  <testcase name="isAlertComingForDelete" classname="testCases.TC004_DeleteContactTest" time="3.599"/>
+  <testcase name="verifyDeleteContact" classname="testCases.TC004_DeleteContactTest" time="2.75"/>
+  <testcase name="verifyAddedContact" classname="testCases.TC005_ContactDisplayTest" time="2.164"/>
+  <testcase name="verifyPhoneNumberExtensions" classname="testCases.TC005_ContactDisplayTest" time="1.037"/>
+  <testcase name="verifySortLastName" classname="testCases.TC005_ContactDisplayTest" time="0.446"/>
+  <testcase name="verifyPageRedirectContact" classname="testCases.TC006_EditContactTest" time="1.006"/>
+  <testcase name="verifyEditContactDetails" classname="testCases.TC006_EditContactTest" time="5.879"/>
+  <testcase name="verifySaveEmptyFields" classname="testCases.TC006_EditContactTest" time="2.524"/>
+  <testcase name="verifyBtnLogoutVisible" classname="testCases.TC007_LogoutTest" time="1.408"/>
+  <testcase name="verifyBtnLogout" classname="testCases.TC007_LogoutTest" time="1.363"/>
 </testsuite>

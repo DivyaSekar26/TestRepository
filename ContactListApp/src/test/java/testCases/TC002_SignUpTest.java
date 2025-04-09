@@ -21,28 +21,50 @@ public class TC002_SignUpTest extends BaseClass {
 	public void verifySignUpVisible() {
 
 		boolean btnStatus1 = hp.btnSignUp.isDisplayed();
-		Assert.assertTrue(btnStatus1);
+		if(btnStatus1)
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 	}
 
 	@Test(priority = 2)
 	public void verifySignUpEnabled() {
 		boolean btnStatus2 = hp.btnSignUp.isEnabled();
-		Assert.assertTrue(btnStatus2);
-		takeScreenshot();
+		if(btnStatus2)
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+		
 	}
 
 	@Test(priority = 3)
 	public void verifySignUpClick() {
 		hp.clickSignUp();
 		String title = driver.getTitle();
-		Assert.assertEquals("Add User", title);
-		takeScreenshot();
-
+		if( title.equals("Add User"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 	}
 	
 	@AfterClass
 	public void tearDown() {
-	driver.close();		
+	driver.quit();		
 	}
 
 }

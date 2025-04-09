@@ -25,7 +25,7 @@ public class TC005_ContactDisplayTest extends BaseClass{
 	@BeforeClass
 	public void setup() {
 		hp = new HomePage(BaseClass.driver);
-		hp.clickSubmit("divya26998@gmail.com", "Divyasekar26@"); 
+		hp.clickSubmit("xyz_test@gmail.com", "Divya1234"); 
 		ac = new AddContact(BaseClass.driver);
 		mcp = new MyContactsPage(BaseClass.driver);
 	}
@@ -33,12 +33,20 @@ public class TC005_ContactDisplayTest extends BaseClass{
 	@Test(priority=1)
 	public void verifyAddedContact()
 	{
+		try
+		{
 		Assert.assertEquals(driver.findElement(By.xpath("//table/tr[2]/td[2]")).getText(), "Neha S");
 		Assert.assertEquals(driver.findElement(By.xpath("//table/tr[2]/td[4]")).getText(), "neha123@gmail.com");
 		Assert.assertEquals(driver.findElement(By.xpath("//table/tr[2]/td[5]")).getText(), "+919080356790");
 		Assert.assertEquals(driver.findElement(By.xpath("//table/tr[2]/td[6]")).getText(), "No.5 Chennai");
 		Assert.assertEquals(driver.findElement(By.xpath("//table/tr[2]/td[7]")).getText(), "Chennai TamilNadu 999888");
 		Assert.assertEquals(driver.findElement(By.xpath("//table/tr[2]/td[8]")).getText(), "India");
+		}
+		catch (Exception e)
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 	}
 	
 	@Test(priority=2)
@@ -53,7 +61,15 @@ public class TC005_ContactDisplayTest extends BaseClass{
 	    	String dynamicXpath = String.format("//table/tr[%d]/td[5]", i);
 	    	if(!(driver.findElement(By.xpath(dynamicXpath)).getText().isEmpty()))
 	    			{
-		Assert.assertTrue(driver.findElement(By.xpath(dynamicXpath)).getText().startsWith("+91"));
+		           if(driver.findElement(By.xpath(dynamicXpath)).getText().startsWith("+91"))
+		           {
+		        	   Assert.assertTrue(true);
+		           }
+		           else
+		           {
+		        	   takeScreenshot();
+		        	   Assert.fail();
+		           }
 	    			}
 	    
 		}
@@ -85,14 +101,15 @@ public class TC005_ContactDisplayTest extends BaseClass{
 		}
 		else
 		{
-			Assert.assertFalse(true);
+			takeScreenshot();
+			Assert.fail();
 		}
 	}
 	
 	
 	@AfterClass
 	public void tearDown() {
-	driver.close();		
+	driver.quit();		
 	}
 
 }
