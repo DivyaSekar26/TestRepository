@@ -28,7 +28,7 @@ public class TC004_DeleteContactTest extends BaseClass {
 	@BeforeClass
 	public void setup() {
 		hp = new HomePage(BaseClass.driver);
-		hp.clickSubmit("divya26998@gmail.com", "Divyasekar26@"); 
+		hp.clickSubmit("xyz_test@gmail.com", "Divya1234"); 
 		mcp = new MyContactsPage(BaseClass.driver);
 		cd = new ContactDetails(BaseClass.driver);
 	}
@@ -43,7 +43,6 @@ public class TC004_DeleteContactTest extends BaseClass {
 		try {
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
-			takeScreenshot();
 			alert.dismiss();
 		} catch (NoAlertPresentException e) {
 			logger.info("No Alert appeared");
@@ -64,13 +63,19 @@ public class TC004_DeleteContactTest extends BaseClass {
 		cd.confirmDelete();
 		
         logger.info("After size: "+list.size());
-		Assert.assertEquals(list.size(), size - 1); // checking whether it impacts any other contacts by confirming count
+		if(list.size()==( size - 1)) {
+			Assert.assertTrue(true);
+		}
+		else
+		{
 		takeScreenshot();
+		Assert.fail();
+		}
 	}
 	
 	@AfterClass
 	public void tearDown() {
-	driver.close();		
+	driver.quit();		
 	}
 
 }

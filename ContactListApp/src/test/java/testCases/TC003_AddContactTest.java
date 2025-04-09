@@ -24,7 +24,7 @@ public class TC003_AddContactTest extends BaseClass {
 	@BeforeClass
 	public void setup() {
 		hp = new HomePage(BaseClass.driver);
-		hp.clickSubmit("divya26998@gmail.com", "Divyasekar26@"); // Perform login once
+		hp.clickSubmit("xyz_test@gmail.com", "Divya1234"); 
 		ac = new AddContact(BaseClass.driver);
 		mcp = new MyContactsPage(BaseClass.driver);
 	}
@@ -50,7 +50,15 @@ public class TC003_AddContactTest extends BaseClass {
 		ac.setCountry("India");
 		ac.clickSubmit();
 		takeScreenshot();
-		Assert.assertEquals("Contact List", mcp.contactPageHeader.getText());
+		if( mcp.contactPageHeader.getText().equals("Contact List"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 
 	}
 
@@ -67,8 +75,14 @@ public class TC003_AddContactTest extends BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(90));
 		ac.clickSubmit();
 		waitForElement(ac.errorMsg);
-		Assert.assertEquals(ac.errorMsg.getText(), "Contact validation failed: firstName: Path `firstName` is required., lastName: Path `lastName` is required.");
+		if(ac.errorMsg.getText().equals( "Contact validation failed: firstName: Path `firstName` is required., lastName: Path `lastName` is required."))
+		{
+			Assert.assertTrue(true);
+		}
+		else {
 		takeScreenshot();
+		Assert.fail();
+		}
 		ac.btnCancel.click();
 
 		
@@ -88,7 +102,15 @@ public class TC003_AddContactTest extends BaseClass {
 		ac.setPostalCode("999888");
 		ac.setCountry("India");
 		ac.clickSubmit();
-		Assert.assertEquals("Contact List", mcp.contactPageHeader.getText());
+		if( mcp.contactPageHeader.getText().equals("Contact List"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
 }
 
 	@Test(priority = 3)
@@ -112,8 +134,15 @@ public class TC003_AddContactTest extends BaseClass {
 		waitForElement(ac.errorMsg);
 		// Assert.assertEquals("Contact validation failed: birthdate: Birthdate is
 		// invalid", ac.errorMsg.getText());
-		Assert.assertEquals(ac.errorMsg.getText(), "Contact validation failed: birthdate: Birthdate is invalid");
+		if(ac.errorMsg.getText().equals("Contact validation failed: birthdate: Birthdate is invalid"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
 		takeScreenshot();
+		Assert.fail();
+		}
 		ac.btnCancel.click();
 		
 
@@ -129,7 +158,7 @@ public class TC003_AddContactTest extends BaseClass {
 	
 	@AfterClass
 	public void tearDown() {
-	driver.close();		
+	driver.quit();		
 	}
 
 }
