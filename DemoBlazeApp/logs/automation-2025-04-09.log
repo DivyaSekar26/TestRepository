@@ -1,0 +1,47 @@
+22:32:06.506 [main] INFO  testCases.TC007_LogoutTest - Inside verifyLogoutRedirect test method
+22:35:58.872 [main] INFO  testCases.TC001_SignUpTest - Inside btnSignUpVisible test method
+22:36:14.355 [main] INFO  testCases.TC002_LoginTest - Inside verifyLoginVisible test method
+22:36:14.434 [main] INFO  testCases.TC002_LoginTest - Inside verifyLoginClickable test method
+22:36:14.499 [main] INFO  testCases.TC002_LoginTest - Inside verifyLogin test method
+22:36:29.805 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyAllMenuDisplay test method
+22:36:32.040 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyAllCategories test method
+22:36:32.228 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyLogo test method
+22:36:41.222 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyClickProduct test method
+22:36:42.604 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
+22:36:43.289 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.price.getText()$650 *includes tax
+22:36:43.342 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.prodDescription.getText()The Motorola Google Nexus 6 is powered by 2.7GHz quad-core Qualcomm Snapdragon 805 processor and it comes with 3GB of RAM.
+22:36:43.404 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyAddToCart test method
+22:37:31.612 [main] INFO  testCases.TC005_CartTest - Inside verifyPrice test method
+22:38:31.702 [main] INFO  testCases.TC005_CartTest - there are no products in Cart and cannot execute this testcase verifyPrice
+22:38:42.952 [main] INFO  testCases.TC006_PurchaseTest - Inside verifyPageRedirect test method
+22:38:44.015 [main] INFO  testCases.TC006_PurchaseTest - Inside verifyPurchase test method
+22:38:58.779 [main] INFO  testCases.TC007_LogoutTest - Inside verifyLogOutvisible test method
+22:38:59.703 [main] INFO  testCases.TC007_LogoutTest - Inside verifyLogoutRedirect test method
+22:40:39.003 [main] INFO  testCases.TC001_SignUpTest - Inside btnSignUpVisible test method
+22:40:50.242 [main] INFO  testCases.TC002_LoginTest - Inside verifyLoginVisible test method
+22:40:50.311 [main] INFO  testCases.TC002_LoginTest - Inside verifyLoginClickable test method
+22:40:50.365 [main] INFO  testCases.TC002_LoginTest - Inside verifyLogin test method
+22:41:04.628 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyAllMenuDisplay test method
+22:41:07.450 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyAllCategories test method
+22:41:07.604 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyLogo test method
+22:41:23.232 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyClickProduct test method
+22:41:24.830 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
+22:41:25.530 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.price.getText()$650 *includes tax
+22:41:25.586 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.prodDescription.getText()The Motorola Google Nexus 6 is powered by 2.7GHz quad-core Qualcomm Snapdragon 805 processor and it comes with 3GB of RAM.
+22:41:25.726 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyAddToCart test method
+22:42:11.701 [main] INFO  testCases.TC005_CartTest - Inside verifyPrice test method
+22:43:11.774 [main] INFO  testCases.TC005_CartTest - there are no products in Cart and cannot execute this testcase verifyPrice
+22:44:49.537 [main] INFO  testCases.TC001_SignUpTest - Inside btnSignUpVisible test method
+22:44:59.093 [main] INFO  testCases.TC002_LoginTest - Inside verifyLoginVisible test method
+22:44:59.150 [main] INFO  testCases.TC002_LoginTest - Inside verifyLoginClickable test method
+22:44:59.185 [main] INFO  testCases.TC002_LoginTest - Inside verifyLogin test method
+22:45:08.870 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyAllMenuDisplay test method
+22:45:11.628 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyAllCategories test method
+22:45:11.710 [main] INFO  testCases.TC003_HomeScreenTest - Inside verifyLogo test method
+22:45:19.658 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyClickProduct test method
+22:45:21.494 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyProductdetails test method
+22:45:22.094 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.price.getText()$650 *includes tax
+22:45:22.130 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - pp.prodDescription.getText()The Motorola Google Nexus 6 is powered by 2.7GHz quad-core Qualcomm Snapdragon 805 processor and it comes with 3GB of RAM.
+22:45:22.188 [main] INFO  testCases.TC004_ProductCategoryDisplayTest - Inside verifyAddToCart test method
+22:45:37.270 [main] INFO  testCases.TC005_CartTest - Inside verifyDelete test method
+22:45:42.444 [main] INFO  testCases.TC005_CartTest - Inside verifyPrice test method

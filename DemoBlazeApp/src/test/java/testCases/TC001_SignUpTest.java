@@ -35,7 +35,6 @@ public class TC001_SignUpTest extends BaseClass {
 
 	@Test(priority = 2)
 	public void btnSignUpClcikable() {
-		logger.info("Inside btnSignUpClcikable test method");
 		if (hp.btnSignUp.isEnabled()) {
 			Assert.assertTrue(true);
 		} else {
@@ -47,7 +46,6 @@ public class TC001_SignUpTest extends BaseClass {
 
 	@Test(priority = 3)
 	public void verifySignUpBtn() {
-		logger.info("Inside verifySignUpBtn test method");
 		hp.clickSignUpButton();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signInModalLabel")));
