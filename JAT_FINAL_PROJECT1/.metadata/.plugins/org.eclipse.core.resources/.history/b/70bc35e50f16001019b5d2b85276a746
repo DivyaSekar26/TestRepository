@@ -1,0 +1,37 @@
+package testCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import pageObjects.HomePage;
+import pageObjects.SearchHotelPage;
+import testBase.BaseClass;
+
+public class TS002_SearchHotelTest extends BaseClass {
+	
+	HomePage hp;
+	SearchHotelPage sp;
+	
+	@BeforeClass
+	public void setUp() throws IOException
+	{
+	FileReader fr=new FileReader(System.getProperty("user.dir")+ "\\src\\test\\resources\\config.properties");
+	Properties pr=new Properties();
+	pr.load(fr);
+	hp=new HomePage(BaseClass.driver);	
+	sp=new SearchHotelPage(BaseClass.driver);
+	hp.passCredentials(System.getProperty("USERNAME"), System.getProperty("PASSWORD"));
+	hp.clickLogin();
+	}
+	
+	@Test
+	public void verifyWelcomeText()
+	{
+		
+	}
+
+}

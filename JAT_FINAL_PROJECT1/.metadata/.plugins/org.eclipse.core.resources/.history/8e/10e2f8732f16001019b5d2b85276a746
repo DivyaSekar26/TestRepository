@@ -1,0 +1,51 @@
+package testCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import pageObjects.BookHotelPage;
+import pageObjects.HomePage;
+import pageObjects.SearchHotelPage;
+import pageObjects.SelectHotelPage;
+import testBase.BaseClass;
+
+public class TS004_BookHotelTest extends BaseClass{
+	HomePage hp;
+	SearchHotelPage sp;
+	SelectHotelPage sl;
+	BookHotelPage bp;
+	
+	public void setUp() throws IOException
+	{
+		
+		FileReader fr=new FileReader(System.getProperty("user.dir")+ "\\src\\test\\resources\\config.properties");
+		Properties pr=new Properties();
+		pr.load(fr);
+		hp=new HomePage(BaseClass.driver);
+		sp=new SearchHotelPage(BaseClass.driver);
+		sl=new SelectHotelPage(BaseClass.driver);
+		bp=new BookHotelPage(BaseClass.driver);
+		hp.passCredentials(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
+		hp.clickLogin();
+		
+	}
+	
+	public void verifyBookingByValidDetails()
+	{
+		sp.clickSearchHotel();
+		sp.selectOptions(sp.dropdownLocation, "Sydney");
+		sp.selectOptions(sp.dropdownHotels, "Hotel Creek");
+		sp.selectOptions(sp.dropdownRoomTypes, "Standard");
+		sp.selectOptions(sp.dropdownRoomNos, "2");
+		//sp.passCheckinDate("12/04/2025");
+		//sp.passCheckoutDate("15/04/2025");
+		sp.selectOptions(sp.dropdownAdultsPerRoom, "2");
+		sp.selectOptions(sp.dropdownChildPerRoom, "1");
+		sp.clickSubmitBtn();	
+		sl.selectHotel(0, sl.radioListedHotels);
+		sl.clickContinue();
+		
+	}
+
+}

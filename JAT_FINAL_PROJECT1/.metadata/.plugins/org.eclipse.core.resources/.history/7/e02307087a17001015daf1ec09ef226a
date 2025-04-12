@@ -1,0 +1,182 @@
+package testCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import pageObjects.BookHotelPage;
+import pageObjects.HomePage;
+import pageObjects.SearchHotelPage;
+import pageObjects.SelectHotelPage;
+import testBase.BaseClass;
+import utilities.BookingDetailsHelper;
+
+public class TS004_BookHotelTest extends BaseClass {
+	HomePage hp;
+	SearchHotelPage sp;
+	SelectHotelPage sl;
+	BookHotelPage bp;
+	BookingDetailsHelper bhp = new BookingDetailsHelper();
+
+	@BeforeMethod
+	public void setUp() throws IOException {
+
+		FileReader fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties");
+		Properties pr = new Properties();
+		pr.load(fr);
+		hp = new HomePage(BaseClass.driver);
+		sp = new SearchHotelPage(BaseClass.driver);
+		sl = new SelectHotelPage(BaseClass.driver);
+		bp = new BookHotelPage(BaseClass.driver);
+		hp.passCredentials(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
+		hp.clickLogin();
+
+	}
+	@DataProvider(name="bookingdata")
+	public Object[][] testData()
+	{
+		Object[][] data= {{"Brisbane", "Hotel Hervey", "Deluxe", "2", "2", "1", "Tina", "T", "18 cross st", "1234123412341234", "VISA", "1", "2028", "223"},
+				{"Adelaide", "Hotel Cornice", "Super Deluxe", "2", "2", "1", "Lina", "L", "10 cross st", "1232123412341234", "MAST", "3", "2030", "111"}};
+		return data;
+	}
+	
+	@DataProvider(name="invalidData")
+	public Object[][] testInvalidData()
+	{
+		Object[][] data= {{"Brisbane", "Hotel Hervey", "Deluxe", "2", "2", "1", "Tina", "T", "18 cross st", "1234123412341234", "VISA", "1", "2028", "223"}};
+			
+		return data;
+	}
+
+	@Test(priority = 1, dataProvider = "bookingdata" )
+	public void verifyBookingByValidDetails(String location, String hotelName, String roomType, String noOfrooms, String numOfadults, String noOfChild,
+			String fname, String lname, String address, String ccNum, String cardType,
+			String expMonth, String expYear, String cvvNum) {
+        bhp.enterHotelDetails(location, hotelName, roomType, noOfrooms, numOfadults, noOfChild);
+        sp.clickSubmitBtn();
+        sl.selectHotel(0, sl.radioListedHotels);
+        sl.clickContinue();
+		bhp.enterBookingDetails(fname, lname, address, ccNum, cardType, expMonth,expYear,cvvNum  );
+		bp.clickBookNowButton();
+		
+		WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(30));
+	    Boolean pageLoaded=	wait.until(ExpectedConditions.urlContains("BookingConfirm.php"));
+		if(pageLoaded)
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+
+	}
+	
+	@Test(priority = 2, dataProvider = "bookingdata" )
+	public void verifyCancelButton(String location, String hotelName, String roomType, String noOfrooms, String numOfadults, String noOfChild,
+			String fname, String lname, String address, String ccNum, String cardType,
+			String expMonth, String expYear, String cvvNum)
+	{
+		bhp.enterHotelDetails(location, hotelName, roomType, noOfrooms, numOfadults, noOfChild);
+		sp.clickSubmitBtn();
+		sl.selectHotel(0, sl.radioListedHotels);
+		sl.clickContinue();
+		bhp.enterBookingDetails(fname, lname, address, ccNum, cardType, expMonth, expYear, cvvNum);
+		bp.clickCancelButton();
+		if(driver.getCurrentUrl().contains("SelectHotel.php"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+	}
+	
+	@Test(priority=3, dataProvider = "invalidData")
+	public void verifyPassingCvvNumber(String location, String hotelName, String roomType, String noOfrooms, String numOfadults, String noOfChild,
+			String fname, String lname, String address, String ccNum, String cardType,
+			String expMonth, String expYear, String cvvNum)
+	{
+		bhp.enterHotelDetails(location, hotelName, roomType, noOfrooms, numOfadults, noOfChild);
+		sp.clickSubmitBtn();
+		sl.selectHotel(0, sl.radioListedHotels);
+		sl.clickContinue();
+		bhp.enterBookingDetails(fname, lname, address, ccNum, cardType, expMonth, expYear, "abcd&()");
+		bp.clickBookNowButton();
+		if(bp.getValidationTextCvvNum().equals("Please Enter your Credit Card CVV Number"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+		
+	}
+	
+	@Test(priority=4, dataProvider = "invalidData")
+	public void verifyPassingCreditCardNumber(String location, String hotelName, String roomType, String noOfrooms, String numOfadults, String noOfChild,
+			String fname, String lname, String address, String ccNum, String cardType,
+			String expMonth, String expYear, String cvvNum)
+	{
+		bhp.enterHotelDetails(location, hotelName, roomType, noOfrooms, numOfadults, noOfChild);
+		sp.clickSubmitBtn();
+		sl.selectHotel(0, sl.radioListedHotels);
+		sl.clickContinue();
+		bhp.enterBookingDetails(fname, lname, address, "abcd&()", cardType, expMonth, expYear, cvvNum);
+		bp.clickBookNowButton();
+		if(bp.getValidationTextCvvNum().equals("Please Enter your Credit Card CVV Number"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+		
+	}
+	
+	@Test(priority=5, dataProvider = "bookingdata")
+	public void verifyNonEditableFields(String location, String hotelName, String roomType, String noOfrooms, String numOfadults, String noOfChild,
+			String fname, String lname, String address, String ccNum, String cardType,
+			String expMonth, String expYear, String cvvNum)
+	{
+		bhp.enterHotelDetails(location, hotelName, roomType, noOfrooms, numOfadults, noOfChild);
+		sp.clickSubmitBtn();
+		sl.selectHotel(0, sl.radioListedHotels);
+		sl.clickContinue();
+		if(bp.txtHotelName.isEnabled() || bp.txtLocation.isEnabled() || bp.txtroomType.isEnabled()
+				|| bp.txtRoomNos.isEnabled() || bp.txtTotalDays.isEnabled() || bp.txtTotalPrice.isEnabled() || bp.txtPricePerNight.isEnabled() || bp.txtGSTDis.isEnabled())
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+		else
+		{
+			Assert.assertTrue(true);
+		}
+		
+	}
+	
+	@AfterMethod
+	public void tearDown()
+	{
+		driver.quit();
+	}
+
+}

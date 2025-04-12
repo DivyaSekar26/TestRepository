@@ -1,0 +1,45 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+public class SearchHotelPage extends BasePage{
+
+	public SearchHotelPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@FindBy(id="username_show")
+	public WebElement valWelcomeTxt;
+	
+	@FindBy(xpath="//select[@id='location']")
+	public WebElement dropdownLocation;
+	
+	@FindBy(xpath="//select[@id='hotels']")
+	public WebElement dropdownHotels;
+	
+	@FindBy(xpath="//select[@id='room_type']")
+	public WebElement dropdownRoomTypes;
+	
+	@FindBy(xpath="//select[@id='room_nos']")
+	public WebElement dropdownRoomNos;
+	
+	@FindBy(xpath="//input[@id='datepick_in']")
+	public WebElement dateCheckin;
+	
+	@FindBy(xpath="//input[@id='datepick_out']")
+	public WebElement dateCheckout;
+	
+	
+	
+	
+	public void SelectOptions(WebElement element, String value)	
+	{
+		Select select =new Select(element);
+		select.selectByValue(value);
+	}
+
+}

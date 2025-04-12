@@ -1,0 +1,56 @@
+package repoConfig;
+
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+
+public class TestReport implements ITestListener {
+
+	public ExtentSparkReporter extentspakrep;
+	public ExtentReports extentrep;
+	public ExtentTest extentTest;
+
+	public void onStart(ITestContext context) {
+		extentspakrep = new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/sparkreport.html");
+		extentspakrep.config().setDocumentTitle("AdactinHotelApp Testing Report");
+		extentspakrep.config().setReportName("Regression Testing");
+		extentspakrep.config().setTheme(Theme.DARK);
+
+		extentrep = new ExtentReports();
+		extentrep.attachReporter(extentspakrep);
+
+		extentrep.setSystemInfo("Computer Name", "LocalHost");
+		extentrep.setSystemInfo("Environment", "QA");
+		extentrep.setSystemInfo("Tester Name", "Divya");
+		extentrep.setSystemInfo("OS", "windows 11");
+		extentrep.setSystemInfo("Browser Name", "Chrome");
+	}
+
+	public void onTestSuccess(ITestResult result) {
+		extentTest = extentrep.createTest(result.getName());
+		extentTest.log(Status.PASS, "Test Case is passed " + result.getName());
+	}
+
+	public void onTestFailure(ITestResult result) {
+		extentTest = extentrep.createTest(result.getName());
+		extentTest.log(Status.FAIL, result.getThrowable());
+		extentTest.log(Status.FAIL, "Test Case is Failed " + result.getName());
+	}
+
+	public void onTestSkipped(ITestResult result) {
+		extentTest = extentrep.createTest(result.getName());
+		extentTest.log(Status.SKIP, "Test Case is Skipped " + result.getName());
+	}
+
+	public void onFinish(ITestContext context) {
+		extentrep.flush();
+
+	}
+
+}

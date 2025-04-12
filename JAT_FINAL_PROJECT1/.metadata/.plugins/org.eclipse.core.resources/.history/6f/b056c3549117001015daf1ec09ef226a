@@ -1,0 +1,76 @@
+package pageObjects;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class BookedItineraryPage extends BasePage {
+
+	public BookedItineraryPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+	@FindBy(className = "login_title")
+	public WebElement valLoginTitle;
+
+	@FindBy(id = "order_id_text")
+	public WebElement txtOrderId;
+
+	@FindBy(id = "search_hotel_id")
+	public WebElement btnGo;
+
+	@FindBy(name = "ids[]")
+	public List<WebElement> checkBoxOrder;
+
+	@FindBy(name = "check_all")
+	public WebElement chkBoxcheckAll;
+
+	@FindBy(xpath = "//input[contains(@id,'btn_id_')]")
+	public List<WebElement> btnCancelRow;
+
+	@FindBy(xpath = "//input[contains(@id,'order_id_')]")
+	public List<WebElement> valOrderId;
+
+	@FindBy(name = "cancelall")
+	public WebElement btnCancelAll;
+
+	@FindBy(id = "search_hotel")
+	public WebElement btnSearchHotel;
+
+	@FindBy(id = "logout")
+	public WebElement btnLogout;
+
+	public String getLoginTitle() {
+		return valLoginTitle.getText();
+	}
+
+	public void clickCancelAll() {
+		btnCancelAll.click();
+	}
+
+	public void clickSearchHotel() {
+		btnSearchHotel.click();
+	}
+
+	public void clickLogout() {
+		btnLogout.click();
+	}
+
+	public void checkByOrderId(String orderId) {
+		int i = 0;
+		for (WebElement ele : valOrderId)
+			if (ele.getAttribute("Value").equals(orderId)) {
+
+				checkBoxOrder.get(i).click();
+
+			}
+		i++;
+		{
+
+		}
+	}
+
+}

@@ -1,0 +1,113 @@
+package testCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import pageObjects.HomePage;
+import pageObjects.SearchHotelPage;
+import pageObjects.SelectHotelPage;
+import testBase.BaseClass;
+import utilities.BookingDetailsHelper;
+
+public class TS002_SearchHotelTest extends BaseClass {
+
+	HomePage hp;
+	SearchHotelPage sp;
+	SelectHotelPage sl;
+	BookingDetailsHelper bhp = new BookingDetailsHelper();
+
+	@BeforeMethod
+	public void setUp() throws IOException {
+		FileReader fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties");
+		Properties pr = new Properties();
+		pr.load(fr);
+		hp = new HomePage(BaseClass.driver);
+		sp = new SearchHotelPage(BaseClass.driver);
+		sl = new SelectHotelPage(BaseClass.driver);
+		hp.passCredentials(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
+		hp.clickLogin();
+	}
+
+	@DataProvider(name = "searchData")
+	public Object[][] bookingDetailsData() {
+		Object[][] data = { { "London", "Hotel Creek", "Standard", "2", "2", "1" },
+				{ "Paris", "Hotel Sunshine", "Double", "2", "2", "1" } };
+		return data;
+
+	}
+
+	@Test(priority = 1)
+	public void verifyWelcomeText() {
+		if (sp.valWelcomeTxt.getAttribute("value").equals("Hello divyasekar1234!")) {
+			Assert.assertTrue(true);
+		} else {
+			takeScreenshot();
+			Assert.fail();
+		}
+	}
+
+	@Test(priority = 2, dataProvider = "searchData")
+	public void searchHotelByAllDetails(String location, String hotelName, String roomType, String noOfrooms,
+			String numOfadults, String noOfChild) {
+
+		bhp.enterBookingDetails(location, hotelName, roomType, noOfrooms, numOfadults, noOfChild);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.visibilityOf(sp.btnSubmit));
+		sp.clickSubmitBtn();
+		if (driver.getCurrentUrl().contains("SelectHotel.php")) {
+			Assert.assertTrue(true);
+		} else {
+			takeScreenshot();
+			Assert.fail();
+		}
+
+		sl.clickCancel();
+
+	}
+
+	@Test(priority = 3)
+	public void searchHotelbyDefaultDetails() {
+		sp.clickSubmitBtn();
+
+		if (sp.getErrorLocation().equals("Please Select a Location")) {
+			Assert.assertTrue(true);
+		} else {
+			takeScreenshot();
+			Assert.fail();
+		}
+
+	}
+
+	@Test(priority = 4, dataProvider = "searchData")
+	public void verifyResetButton(String location, String hotelName, String roomType, String noOfrooms,
+			String numOfadults, String noOfChild) {
+		bhp.enterBookingDetails(location, hotelName, roomType, noOfrooms, numOfadults, noOfChild);
+		sp.clickResetBtn();
+
+		Select select = new Select(sp.dropdownLocation);
+
+		if (select.getFirstSelectedOption().getText().equals("- Select Location -")) {
+			Assert.assertTrue(true);
+		} else {
+			takeScreenshot();
+			Assert.fail();
+		}
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+
+}

@@ -1,0 +1,57 @@
+package testCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import pageObjects.HomePage;
+import pageObjects.SearchHotelPage;
+import testBase.BaseClass;
+
+public class TS002_SearchHotelTest extends BaseClass {
+	
+	HomePage hp;
+	SearchHotelPage sp;
+	
+	@BeforeClass
+	public void setUp() throws IOException
+	{
+	FileReader fr=new FileReader(System.getProperty("user.dir")+ "\\src\\test\\resources\\config.properties");
+	Properties pr=new Properties();
+	pr.load(fr);
+	hp=new HomePage(BaseClass.driver);	
+	sp=new SearchHotelPage(BaseClass.driver);
+	hp.passCredentials(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
+	hp.clickLogin();
+	}
+	
+	@Test(priority=1)
+	public void verifyWelcomeText()
+	{
+	if(sp.valWelcomeTxt.getAttribute("value").equals
+			("Hello divyasekar1234!"))
+	{
+		Assert.assertTrue(true);
+	}
+	else
+	{
+		takeScreenshot();
+		Assert.fail();
+	}
+	}
+	
+	@Test(priority=2)
+	public void searchHotelByAllDetails()
+	{
+		sp.SelectOptions(sp.dropdownLocation, "Melbourne");
+		
+		
+	}
+
+}

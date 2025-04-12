@@ -1,0 +1,74 @@
+package testCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import pageObjects.HomePage;
+import pageObjects.SearchHotelPage;
+import pageObjects.SelectHotelPage;
+import testBase.BaseClass;
+import utilities.BookingDetailsHelper;
+
+public class TS007_HomeScreenTest extends BaseClass{
+	
+	HomePage hp;
+	SearchHotelPage sp;
+	SelectHotelPage sl;
+	BookingDetailsHelper bhp = new BookingDetailsHelper();
+
+	@BeforeMethod
+	public void setUp() throws IOException {
+		FileReader fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties");
+		Properties pr = new Properties();
+		pr.load(fr);
+		hp = new HomePage(BaseClass.driver);
+		sp = new SearchHotelPage(BaseClass.driver);
+		sl = new SelectHotelPage(BaseClass.driver);
+		hp.passCredentials(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
+		hp.clickLogin();
+	}
+
+	@Test(priority=1)
+	public void verifyLogout()
+	{
+		sp.clickLogout();
+		
+		if(driver.getCurrentUrl().contains("Logout.php"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{takeScreenshot();
+		Assert.fail();
+		}
+	}
+
+
+	@Test(priority=2)
+	public void verifyChangePassword()
+	{
+		sp.clickChangePassword();;
+		
+		if(driver.getCurrentUrl().contains("ChangePassword.php"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{takeScreenshot();
+		Assert.fail();
+		}
+	}
+	
+	 @AfterMethod
+	    public void tearDown()
+	    {
+	    	driver.quit();
+	    }
+
+}

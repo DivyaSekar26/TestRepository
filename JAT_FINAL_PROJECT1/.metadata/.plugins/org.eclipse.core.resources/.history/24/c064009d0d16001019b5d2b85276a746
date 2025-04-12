@@ -1,0 +1,47 @@
+package testCases;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import pageObjects.HomePage;
+import testBase.BaseClass;
+
+public class TS001_LoginTest extends BaseClass {
+	HomePage hp;
+	
+	@BeforeClass
+	public void setUp()
+	{
+		 hp=new HomePage(BaseClass.driver);	
+	}
+	
+    @Test(priority=1)
+	public void verifyLoginBtnVisible()
+	{
+		if(hp.btnLogin.isDisplayed())
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+	}
+    
+    @Test(priority=3)
+    public void verifyValidCredentials()
+    {
+    	hp.passCredentials("divya1234", "divya26");
+    	hp.clickLogin();
+    }
+    
+    @Test(priority=2)
+    public void verifyInvalidCredentials()
+    {
+    	hp.passCredentials("divya123", "divya2");
+    	hp.clickLogin();	
+    }
+	
+}

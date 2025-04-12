@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
+    <fullyQualifiedTypeName name="pageObjects.HomePage"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="pageObjects.SearchHotelPage"/>
+    <fullyQualifiedTypeName name="pageObjects.SelectHotelPage"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.BeforeSuite"/>
+    <fullyQualifiedTypeName name="testCases.TS003_SelectHotelTest"/>
+    <fullyQualifiedTypeName name="pageObjects.BookHotelPage"/>
+    <fullyQualifiedTypeName name="utilities.BookingDetailsHelper"/>
+    <fullyQualifiedTypeName name="pageObjects.BookingConfirmPage"/>
+    <fullyQualifiedTypeName name="pageObjects.LogoutPage"/>
+    <fullyQualifiedTypeName name="pageObjects.BookedItineraryPage"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
+    <fullyQualifiedTypeName name="java.time.Duration"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
+    <fullyQualifiedTypeName name="org.testng.Assert"/>
+</qualifiedTypeNameHistroy>

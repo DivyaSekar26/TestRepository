@@ -1,0 +1,191 @@
+package testCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.List;
+import java.util.Properties;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import pageObjects.BookHotelPage;
+import pageObjects.BookedItineraryPage;
+import pageObjects.BookingConfirmPage;
+import pageObjects.HomePage;
+import pageObjects.LogoutPage;
+import pageObjects.SearchHotelPage;
+import pageObjects.SelectHotelPage;
+import testBase.BaseClass;
+import utilities.BookingDetailsHelper;
+
+public class TS006_BookedItineraryTest extends BaseClass {
+
+	HomePage hp;
+	SearchHotelPage sp;
+	SelectHotelPage sl;
+	BookHotelPage bp;
+	BookingConfirmPage bcp;
+	LogoutPage lp;
+	BookedItineraryPage bip;
+	BookingDetailsHelper bhp = new BookingDetailsHelper();
+
+	@BeforeMethod
+	public void setUp() throws IOException {
+
+		FileReader fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\config.properties");
+		Properties pr = new Properties();
+		pr.load(fr);
+		hp = new HomePage(BaseClass.driver);
+		sp = new SearchHotelPage(BaseClass.driver);
+		sl = new SelectHotelPage(BaseClass.driver);
+		bp = new BookHotelPage(BaseClass.driver);
+		bcp = new BookingConfirmPage(BaseClass.driver);
+		lp = new LogoutPage(BaseClass.driver);
+		bip = new BookedItineraryPage(BaseClass.driver);
+		hp.passCredentials(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
+		hp.clickLogin();
+
+	}
+
+	@DataProvider(name = "orderData")
+	public Object[][] testData() {
+		Object[][] data = { { "FWD3007J18", "UFSB3B79SM" }, };
+
+		return data;
+	}
+	
+
+	@DataProvider(name = "invalidOrderData")
+	public Object[][] testData1() {
+		Object[][] data = { { "adfgh", "adsfdgh" }, };
+
+		return data;
+	}
+
+	@Test(priority = 1, dataProvider = "orderData", enabled = false)
+	public void verifySearchOrderId(String orderId1, String orderId2) {
+		sp.clickBookedItinerary();
+		bip.passOrderIdSearch(orderId1);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		List<WebElement> elements = bip.valOrderId;
+		int size = elements.size();
+		if (elements.get(size - 1).getAttribute("value").equals(orderId1)) {
+			Assert.assertTrue(true);
+		} else {
+			takeScreenshot();
+			Assert.fail();
+		}
+	}
+
+	@Test(priority = 2, dataProvider = "orderData", enabled = false)
+	public void verifyCancelOrder(String orderId1, String OrderId2) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		sp.clickBookedItinerary();
+		bip.passOrderIdSearch(OrderId2);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+		List<WebElement> elements = bip.valOrderId;
+		int size = elements.size();
+		System.out.println(size);
+		if (elements.get(size - 1).getAttribute("value").equals(OrderId2)) {
+			bip.btnCancelRow.get(size - 2).click();
+
+			wait.until(ExpectedConditions.alertIsPresent());
+			if (driver.switchTo().alert().getText().contains(OrderId2)) {
+				driver.switchTo().alert().accept();
+			}
+
+			if (bip.msgResultPage.getText().equals("\r\n" + "					The booking has been cancelled.")) {
+				Assert.assertTrue(true);
+			} else {
+				takeScreenshot();
+				Assert.fail();
+			}
+
+		} else {
+			logger.info("Order Id is not available in the databse");
+		}
+
+	}
+
+	@Test(priority = 3, enabled = false)
+	public void verifyCancelSelected() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		sp.clickBookedItinerary();
+		List<WebElement> elements = bip.valOrderId;
+		int size = elements.size();
+		if (size > 0) {
+			bip.checkBoxOrder.get(1).click();
+			bip.clickCancelSelected();
+			wait.until(ExpectedConditions.alertIsPresent());
+			driver.switchTo().alert().accept();
+			
+			  if (bip.msgResultPage.getText().equals("\r\n" +
+			  "					The booking has been cancelled.")) {
+			  Assert.assertTrue(true);
+			  }
+			
+		} else {
+			logger.info("Order Id is not available in the databse");
+		}
+	}
+	
+	@Test(priority=4, dataProvider = "invalidOrderData", enabled = false)
+	public void verifySearchInvalidOrder(String orderId1, String orderId2)
+	{
+		
+		
+		sp.clickBookedItinerary();
+		bip.passOrderIdSearch(orderId2);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+		if(bip.getResultPageText().equals("\r\n"
+				+ "					0 result(s) found. "))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+	}
+	
+	@Test(priority = 5)
+	public void verifyCheckAllAndCancelSelected()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		sp.clickBookedItinerary();
+		bip.clickCheckAll();
+		bip.clickCancelSelected();
+		wait.until(ExpectedConditions.alertIsPresent());
+		driver.switchTo().alert().accept();
+		if (bip.msgResultPage.getText().equals("\r\n" + "					The booking has been cancelled.")) {
+			Assert.assertTrue(true);
+		} else {
+			takeScreenshot();
+			Assert.fail();
+		}
+
+	}
+	
+	@Test(priority=6)
+	public void verifySearchHotelButton()
+	{
+	bip.clickSearchHotel();
+	if(driver.getCurrentUrl().contains("SearchHotel.php"))
+	{
+		Assert.assertTrue(true);
+	}
+	else
+	{
+		takeScreenshot();
+		Assert.fail();
+	}
+	}
+
+}

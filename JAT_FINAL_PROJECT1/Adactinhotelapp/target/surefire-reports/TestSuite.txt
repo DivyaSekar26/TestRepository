@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 33, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 923.973 sec <<< FAILURE! - in TestSuite
+verifyLogoutButton(testCases.TS005_BookingConfirmTest)  Time elapsed: 12.984 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at testCases.TS005_BookingConfirmTest.verifyLogoutButton(TS005_BookingConfirmTest.java:156)
+
+verifyCancelOrder(testCases.TS006_BookedItineraryTest)  Time elapsed: 89.77 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at testCases.TS006_BookedItineraryTest.verifyCancelOrder(TS006_BookedItineraryTest.java:108)
+
+verifySearchInvalidOrder(testCases.TS006_BookedItineraryTest)  Time elapsed: 52.073 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at testCases.TS006_BookedItineraryTest.verifySearchInvalidOrder(TS006_BookedItineraryTest.java:155)
+
+verifyChangePassword(testCases.TS007_HomeScreenTest)  Time elapsed: 14.841 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at testCases.TS007_HomeScreenTest.verifyChangePassword(TS007_HomeScreenTest.java:64)
+

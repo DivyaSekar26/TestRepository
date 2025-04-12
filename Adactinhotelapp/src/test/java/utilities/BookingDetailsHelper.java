@@ -1,0 +1,71 @@
+package utilities;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.testng.annotations.BeforeMethod;
+
+import pageObjects.BookHotelPage;
+import pageObjects.BookingConfirmPage;
+import pageObjects.HomePage;
+import pageObjects.SearchHotelPage;
+import pageObjects.SelectHotelPage;
+import testBase.BaseClass;
+
+public class BookingDetailsHelper extends BaseClass {
+
+	HomePage hp;
+	SearchHotelPage sp;
+	SelectHotelPage sl;
+	BookHotelPage bp;
+	BookingConfirmPage bcp;
+
+	public void initialiseObjects() {
+		hp = new HomePage(BaseClass.driver);
+		sp = new SearchHotelPage(BaseClass.driver);
+		sl = new SelectHotelPage(BaseClass.driver);
+		bp = new BookHotelPage(BaseClass.driver);
+		bcp = new BookingConfirmPage(BaseClass.driver);
+	}
+
+	public void enterHotelDetails(String location, String hotelName, String roomType, String noOfRooms,
+			String numOfAdults, String noOfChildren) {
+		initialiseObjects();
+		sp.selectOptions(sp.dropdownLocation, location);
+		sp.selectOptions(sp.dropdownHotels, hotelName);
+		sp.selectOptions(sp.dropdownRoomTypes, roomType);
+		sp.selectOptions(sp.dropdownRoomNos, noOfRooms);
+		sp.selectOptions(sp.dropdownAdultsPerRoom, numOfAdults);
+		sp.selectOptions(sp.dropdownChildPerRoom, noOfChildren);
+	}
+
+	public void enterBookingDetails(String fname, String lname, String address, String ccNum, String cardType,
+			String expMonth, String expYear, String cvvNum) {
+		initialiseObjects();
+		bp.passFirstName(fname);
+		bp.passLastName(lname);
+		bp.passAddress(address);
+		bp.passCCnum(ccNum);
+		bp.passCardType(cardType, bp.dropdownCardType);
+		bp.passExpiryMonth(expMonth, bp.dropdownExpiryMonth);
+		bp.passExpiryYear(expYear, bp.dropdownExpiryYear);
+		bp.passCVVnum(cvvNum);
+	}
+
+	public boolean validateBookingDetails(String fname, String lname, String address, String location, String hotelName,
+			String roomType, String noOfRooms) {
+		initialiseObjects();
+		if (!(bcp.viewFirstName.isEnabled() && bcp.viewLastName.isEnabled()
+				 && bcp.viewLocation.isEnabled()
+				&& bcp.viewHotelName.isEnabled()
+				&& bcp.viewRoomType.isEnabled()
+				&& bcp.viewTotalRooms.isEnabled()) && bcp.viewAddress.getText().equals(address)) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+}
