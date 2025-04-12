@@ -1,0 +1,87 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class BookingConfirmPage extends BasePage
+{
+
+	public BookingConfirmPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+	@FindBy(id="hotel_name")
+	public WebElement viewHotelName;
+	
+	@FindBy(id="location")
+	public WebElement viewLocation;
+	
+	@FindBy(id="room_type")
+	public WebElement viewRoomType;
+	
+	@FindBy(id="arrival_date")
+	public WebElement viewArrivalDate;
+	
+	@FindBy(id="departure_text")
+	public WebElement viewDepartureDate;
+	
+	@FindBy(id="total_rooms")
+	public WebElement viewTotalRooms;
+	
+	@FindBy(id="adults_room")
+	public WebElement viewAdultRooms;
+	
+	@FindBy(id="children_room")
+	public WebElement viewChildrenRoom;
+	
+	@FindBy(id="price_night")
+	public WebElement viewPriceNight;
+	
+	@FindBy(id="total_price")
+	public WebElement viewTotalPrice;
+	
+	@FindBy(id="gst")
+	public WebElement viewGst;
+	
+	@FindBy(id="final_price")
+	public WebElement viewFinalPrice;
+	
+	@FindBy(id="first_name")
+	public WebElement viewFirstName;
+	
+	@FindBy(id="last_name")
+	public WebElement viewLastName;
+	
+	@FindBy(id="address")
+	public WebElement viewAddress;
+	
+	@FindBy(id="order_no")
+	public WebElement viewOrderNo;
+	
+	@FindBy(id="search_hotel")
+	public WebElement btnSearchHotel;
+		
+	@FindBy(id="my_itinerary")
+	public WebElement btnMyItinary;
+	
+	@FindBy(id="logout")
+	public WebElement btnLogout;
+	
+	public void clickBtnSearchHotel()
+	{
+		btnSearchHotel.click();
+	}
+	
+	public void clickBtnMyItenary()
+	{
+		btnMyItinary.click();
+	}
+	
+	public void clickBtnLogout()
+	{
+		btnLogout.click();
+	}
+	
+}

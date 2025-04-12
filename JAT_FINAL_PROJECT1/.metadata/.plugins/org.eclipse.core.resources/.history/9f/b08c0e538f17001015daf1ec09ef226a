@@ -1,0 +1,36 @@
+package pageObjects;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class BookedItineraryPage extends BasePage{
+
+	public BookedItineraryPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@FindBy(className="login_title")
+	public WebElement ValLoginTitle;
+	
+	@FindBy(id="order_id_text")
+	public WebElement txtOrderId;
+	
+	@FindBy(id="search_hotel_id")
+	public WebElement btnGo;
+	
+	@FindBy(name="ids[]")
+	public List<WebElement> checkBoxOrder;
+	
+	@FindBy(xpath="//input[contains(@id,'btn_id_')]")
+	public List<WebElement> btnCancelRow;
+	
+	@FindBy(xpath="//input[contains(@id,'order_id_')]")
+	public List<WebElement> ValOrderId;
+	
+	
+
+}

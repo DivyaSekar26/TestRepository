@@ -1,0 +1,55 @@
+package testCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import pageObjects.BookHotelPage;
+import pageObjects.HomePage;
+import pageObjects.SearchHotelPage;
+import pageObjects.SelectHotelPage;
+import testBase.BaseClass;
+
+public class TS004_BookHotelTest extends BaseClass{
+	HomePage hp;
+	SearchHotelPage sp;
+	SelectHotelPage sl;
+	BookHotelPage bp;
+	TS003_SelectHotelTest t3;
+	
+	@BeforeClass
+	public void setUp() throws IOException
+	{
+		
+		FileReader fr=new FileReader(System.getProperty("user.dir")+ "\\src\\test\\resources\\config.properties");
+		Properties pr=new Properties();
+		pr.load(fr);
+		hp=new HomePage(BaseClass.driver);
+		sp=new SearchHotelPage(BaseClass.driver);
+		sl=new SelectHotelPage(BaseClass.driver);
+		bp=new BookHotelPage(BaseClass.driver);
+		t3=new TS003_SelectHotelTest();
+		hp.passCredentials(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
+		hp.clickLogin();
+		
+	}
+	
+	@Test(priority=1)
+	public void verifyBookingByValidDetails()
+	{
+		//t3.verifyContinueButton();
+		bp.passFirstName("xyz");
+		bp.passLastName("xyz");
+		bp.passAddress("xyz");
+		bp.passCCnum("1234123412341234");
+		bp.passExpiryMonth("January", bp.dropdownExpiryMonth);
+		bp.passExpiryYear("2026", bp.dropdownExpiryYear);
+		bp.passCVVnum("123");
+		bp.clickBookNowButton();
+		
+	}
+
+}

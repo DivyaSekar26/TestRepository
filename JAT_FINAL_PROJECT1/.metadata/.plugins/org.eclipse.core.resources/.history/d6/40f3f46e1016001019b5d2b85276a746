@@ -1,0 +1,21 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class SearchHotelPage extends BasePage{
+
+	public SearchHotelPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@FindBy(id="username_show")
+	public WebElement valWelcomeTxt;
+	
+	@FindBy(xpath="//select[@id='location']")
+	public WebElement dropdownLocatoion;
+	
+
+}

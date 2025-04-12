@@ -1,0 +1,141 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+public class BookHotelPage extends BasePage{
+
+	public BookHotelPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@FindBy(id="hotel_name_dis")
+	public WebElement txtHotelName;
+	
+	@FindBy(id="location_dis")
+	public WebElement txtLocation;
+	
+	@FindBy(id="room_type_dis")
+	public WebElement txtroomType;
+	
+	@FindBy(id="room_num_dis")
+	public WebElement txtRoomNos;
+	
+	@FindBy(id="total_days_dis")
+	public WebElement txtTotalDays;
+	
+	@FindBy(id="price_night_dis")
+	public WebElement txtPricePerNight;
+		
+	@FindBy(id="total_price_dis")
+	public WebElement txtTotalPrice;
+	
+	@FindBy(id="gst_dis")
+	public WebElement txtGSTDis;
+	
+	@FindBy(id="final_price_dis")
+	public WebElement txtFinalPriceDis;
+	
+	@FindBy(id="first_name")
+	public WebElement txtFirstName;
+	
+	@FindBy(id="last_name")
+	public WebElement txtLastName;
+	
+	@FindBy(id="address")
+	public WebElement txtAddress;
+	
+	@FindBy(id="cc_num")
+	public WebElement txtCreditCardNum;
+	
+	@FindBy(id="cc_type")
+	public WebElement dropdownCardType;
+	
+	@FindBy(id="cc_exp_month")
+	public WebElement dropdownExpiryMonth;
+	
+	@FindBy(id="cc_exp_year")
+	public WebElement dropdownExpiryYear;
+	
+	@FindBy(id="cc_cvv")
+	public WebElement txtCVVnum;
+	
+	@FindBy(id="book_now")
+	public WebElement btnBookNow;
+	
+	@FindBy(id="cancel")
+	public WebElement btnCancel;
+	
+	@FindBy(xpath="//a[text()='Back']")
+	public WebElement lnkBack;
+	
+	@FindBy(id="cc_num_span")
+	public WebElement vldTextCCNum;
+	
+	public void clickBackButton()
+	{
+		lnkBack.click();
+	}
+	
+	public void passFirstName(String fname)
+	{
+		txtFirstName.sendKeys(fname);
+	}
+	
+	public void passLastName(String lname)
+	{
+		txtLastName.sendKeys(lname);
+	}
+
+	public void passAddress(String address)
+	{
+		txtAddress.sendKeys(address);
+	}
+	
+	public void passCCnum(String num)
+	{
+		txtCreditCardNum.sendKeys(num);
+	}
+	
+	public void selectCardType(String type, WebElement element)
+	{
+		Select select =new Select(element);
+		select.selectByValue(type);
+	}
+	
+	public void passExpiryMonth(String month, WebElement element)
+	{
+		Select select =new Select(element);
+		select.selectByValue(month);
+	}
+	
+	public void passExpiryYear(String year,WebElement element )
+	{
+		Select select=new Select(element);
+		select.selectByValue(year);
+	}
+	
+	public void passCardType(String type,WebElement element )
+	{
+		Select select=new Select(element);
+		select.selectByValue(type);
+	}
+	
+	public void passCVVnum(String cvv)
+	{
+		txtCVVnum.sendKeys(cvv);
+	}
+	
+	public void clickBookNowButton()
+	{
+		btnBookNow.click();
+	}
+	
+	public void clickCancelButton()
+	{
+		btnCancel.click();
+	}
+}

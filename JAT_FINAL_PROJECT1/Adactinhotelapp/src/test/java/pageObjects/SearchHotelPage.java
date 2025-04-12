@@ -1,0 +1,117 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+public class SearchHotelPage extends BasePage{
+
+	public SearchHotelPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@FindBy(id="username_show")
+	public WebElement valWelcomeTxt;
+	
+	@FindBy(xpath="//select[@id='location']")
+	public WebElement dropdownLocation;
+	
+	@FindBy(xpath="//select[@id='hotels']")
+	public WebElement dropdownHotels;
+	
+	@FindBy(xpath="//select[@id='room_type']")
+	public WebElement dropdownRoomTypes;
+	
+	@FindBy(xpath="//select[@id='room_nos']")
+	public WebElement dropdownRoomNos;
+	
+	@FindBy(xpath="//input[@id='datepick_in']")
+	public WebElement dateCheckin;
+	
+	@FindBy(xpath="//input[@id='datepick_out']")
+	public WebElement dateCheckout;
+	
+	@FindBy(xpath="//select[@id='adult_room']")
+	public WebElement dropdownAdultsPerRoom;
+	
+	@FindBy(xpath="//select[@id='child_room']")
+	public WebElement dropdownChildPerRoom;
+	
+	@FindBy(id="Submit")
+	public WebElement btnSubmit;
+	
+	@FindBy(id="Reset")
+	public WebElement btnReset;
+	
+	@FindBy(id="location_span")
+	public WebElement errorLocation;
+	
+	
+	@FindBy(xpath="//a[text()='Search Hotel']")
+	public WebElement lnkSearchHotel;
+	
+	@FindBy(xpath="//a[text()='Booked Itinerary']")
+	public WebElement lnkBookedItinerary;
+	
+	@FindBy(xpath="//a[text()='Logout']")
+	public WebElement lnkLogout;
+	
+	@FindBy(xpath="//a[text()='Change Password']")
+	public WebElement lnkChangepass; 
+	
+	public void passCheckinDate(String date)
+	{
+		dateCheckin.clear();
+		dateCheckin.sendKeys(date);
+	}
+	
+	public void passCheckoutDate(String date)
+	{
+		dateCheckin.clear();
+		dateCheckin.sendKeys(date);
+	}
+	
+	public void selectOptions(WebElement element, String value)	
+	{
+		Select select =new Select(element);
+		select.selectByValue(value);
+	}
+	
+	public void clickSearchHotel()
+	{
+		lnkSearchHotel.click();
+	}
+	
+	public void clickSubmitBtn()
+	{
+		btnSubmit.click();
+	}
+	
+	public void clickResetBtn()
+	{
+		btnReset.click();
+	}
+	
+	public void clickLogout()
+	{
+		lnkLogout.click();
+	}
+	
+	public String getErrorLocation()
+	{
+	return errorLocation.getText();	
+	}
+	
+	public void clickBookedItinerary()
+	{
+		lnkBookedItinerary.click();
+	}
+	
+	public void clickChangePassword()
+	{
+		lnkBookedItinerary.click();
+	}
+
+}

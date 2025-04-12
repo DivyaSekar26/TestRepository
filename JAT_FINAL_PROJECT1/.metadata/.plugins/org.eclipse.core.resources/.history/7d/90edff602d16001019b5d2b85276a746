@@ -1,0 +1,14 @@
+package testCases;
+
+import testBase.BaseClass;
+
+public class TS004_BookHotelTest extends BaseClass{
+	HomePage hp;
+	SearchHotelPage sp;
+	
+	public void setUp()
+	{
+		
+	}
+
+}

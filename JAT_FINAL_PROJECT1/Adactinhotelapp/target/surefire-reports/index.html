@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
+              <span class="suite-name border-failed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Surefire_suite" class="navigator-link ">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Surefire_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Surefire_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Surefire_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Surefire_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Surefire_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">33 methods, 4 failed,   29 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS006_BookedItineraryTest" class="method navigator-link" hash-for-method="verifyCancelOrder(76742AR22U, 2SRFOV3Y82)">verifyCancelOrder(76742AR22U, 2SRFOV3Y82)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS007_HomeScreenTest" class="method navigator-link" hash-for-method="verifyChangePassword">verifyChangePassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS005_BookingConfirmTest" class="method navigator-link" hash-for-method="verifyLogoutButton(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">verifyLogoutButton(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS006_BookedItineraryTest" class="method navigator-link" hash-for-method="verifySearchInvalidOrder(adfgh, adsfdgh)">verifySearchInvalidOrder(adfgh, adsfdgh)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS002_SearchHotelTest" class="method navigator-link" hash-for-method="searchHotelByAllDetails(London, Hotel Creek, Standard, 2, 2, 1)">searchHotelByAllDetails(London, Hotel Creek, Standard, 2, 2, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS002_SearchHotelTest" class="method navigator-link" hash-for-method="searchHotelByAllDetails(Paris, Hotel Sunshine, Double, 2, 2, 1)">searchHotelByAllDetails(Paris, Hotel Sunshine, Double, 2, 2, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS002_SearchHotelTest" class="method navigator-link" hash-for-method="searchHotelbyDefaultDetails">searchHotelbyDefaultDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS003_SelectHotelTest" class="method navigator-link" hash-for-method="verifyBackandCancelButton(Sydney, Hotel Creek, Double, 2, 2, 1)">verifyBackandCancelButton(Sydney, Hotel Creek, Double, 2, 2, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS003_SelectHotelTest" class="method navigator-link" hash-for-method="verifyBackandCancelButton(Melbourne, Hotel Creek, Standard, 2, 2, 1)">verifyBackandCancelButton(Melbourne, Hotel Creek, Standard, 2, 2, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS004_BookHotelTest" class="method navigator-link" hash-for-method="verifyBookingByValidDetails(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)">verifyBookingByValidDetails(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS004_BookHotelTest" class="method navigator-link" hash-for-method="verifyBookingByValidDetails(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">verifyBookingByValidDetails(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS004_BookHotelTest" class="method navigator-link" hash-for-method="verifyCancelButton(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">verifyCancelButton(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS004_BookHotelTest" class="method navigator-link" hash-for-method="verifyCancelButton(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)">verifyCancelButton(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS006_BookedItineraryTest" class="method navigator-link" hash-for-method="verifyCheckAllAndCancelSelected">verifyCheckAllAndCancelSelected</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS003_SelectHotelTest" class="method navigator-link" hash-for-method="verifyContinueButton(Sydney, Hotel Creek, Double, 2, 2, 1)">verifyContinueButton(Sydney, Hotel Creek, Double, 2, 2, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS003_SelectHotelTest" class="method navigator-link" hash-for-method="verifyContinueButton(Melbourne, Hotel Creek, Standard, 2, 2, 1)">verifyContinueButton(Melbourne, Hotel Creek, Standard, 2, 2, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS001_LoginTest" class="method navigator-link" hash-for-method="verifyInvalidCredentials">verifyInvalidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS001_LoginTest" class="method navigator-link" hash-for-method="verifyLoginBtnVisible">verifyLoginBtnVisible</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS007_HomeScreenTest" class="method navigator-link" hash-for-method="verifyLogout">verifyLogout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS006_BookedItineraryTest" class="method navigator-link" hash-for-method="verifyLogout">verifyLogout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS005_BookingConfirmTest" class="method navigator-link" hash-for-method="verifyMyItinerary(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">verifyMyItinerary(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS004_BookHotelTest" class="method navigator-link" hash-for-method="verifyNonEditableFields(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">verifyNonEditableFields(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS004_BookHotelTest" class="method navigator-link" hash-for-method="verifyNonEditableFields(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)">verifyNonEditableFields(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS004_BookHotelTest" class="method navigator-link" hash-for-method="verifyPassingCreditCardNumber(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)">verifyPassingCreditCardNumber(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS004_BookHotelTest" class="method navigator-link" hash-for-method="verifyPassingCvvNumber(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)">verifyPassingCvvNumber(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS005_BookingConfirmTest" class="method navigator-link" hash-for-method="verifyPopulatedFields(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">verifyPopulatedFields(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS002_SearchHotelTest" class="method navigator-link" hash-for-method="verifyResetButton(Paris, Hotel Sunshine, Double, 2, 2, 1)">verifyResetButton(Paris, Hotel Sunshine, Double, 2, 2, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS002_SearchHotelTest" class="method navigator-link" hash-for-method="verifyResetButton(London, Hotel Creek, Standard, 2, 2, 1)">verifyResetButton(London, Hotel Creek, Standard, 2, 2, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS006_BookedItineraryTest" class="method navigator-link" hash-for-method="verifySearchHotelButton">verifySearchHotelButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS005_BookingConfirmTest" class="method navigator-link" hash-for-method="verifySearchHotelPage(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">verifySearchHotelPage(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS006_BookedItineraryTest" class="method navigator-link" hash-for-method="verifySearchOrderId(76742AR22U, 2SRFOV3Y82)">verifySearchOrderId(76742AR22U, 2SRFOV3Y82)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS001_LoginTest" class="method navigator-link" hash-for-method="verifyValidCredentials">verifyValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="testCases.TS002_SearchHotelTest" class="method navigator-link" hash-for-method="verifyWelcomeText">verifyWelcomeText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.TS005_BookingConfirmTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogoutButton(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">
+                  </a> <!-- verifyLogoutButton(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...) -->
+                  <span class="method-name">verifyLogoutButton</span>
+                  <span class="parameters">(Adelaide,Hotel Cornice,Super Deluxe,2,2,1,Lina,L,10 cross st,1232123412341234,MAST,3,2030,111)</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at testCases.TS005_BookingConfirmTest.verifyLogoutButton(TS005_BookingConfirmTest.java:156)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.TS007_HomeScreenTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyChangePassword">
+                  </a> <!-- verifyChangePassword -->
+                  <span class="method-name">verifyChangePassword</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at testCases.TS007_HomeScreenTest.verifyChangePassword(TS007_HomeScreenTest.java:64)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.TS006_BookedItineraryTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCancelOrder(76742AR22U, 2SRFOV3Y82)">
+                  </a> <!-- verifyCancelOrder(76742AR22U, 2SRFOV3Y82) -->
+                  <span class="method-name">verifyCancelOrder</span>
+                  <span class="parameters">(76742AR22U,2SRFOV3Y82)</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at testCases.TS006_BookedItineraryTest.verifyCancelOrder(TS006_BookedItineraryTest.java:108)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchInvalidOrder(adfgh, adsfdgh)">
+                  </a> <!-- verifySearchInvalidOrder(adfgh, adsfdgh) -->
+                  <span class="method-name">verifySearchInvalidOrder</span>
+                  <span class="parameters">(adfgh,adsfdgh)</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at testCases.TS006_BookedItineraryTest.verifySearchInvalidOrder(TS006_BookedItineraryTest.java:155)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.TS005_BookingConfirmTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyMyItinerary(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">
+                  </a> <!-- verifyMyItinerary(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...) -->
+                  <span class="method-name">verifyMyItinerary</span>
+                  <span class="parameters">(Adelaide,Hotel Cornice,Super Deluxe,2,2,1,Lina,L,10 cross st,1232123412341234,MAST,3,2030,111)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPopulatedFields(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">
+                  </a> <!-- verifyPopulatedFields(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...) -->
+                  <span class="method-name">verifyPopulatedFields</span>
+                  <span class="parameters">(Adelaide,Hotel Cornice,Super Deluxe,2,2,1,Lina,L,10 cross st,1232123412341234,MAST,3,2030,111)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchHotelPage(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">
+                  </a> <!-- verifySearchHotelPage(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...) -->
+                  <span class="method-name">verifySearchHotelPage</span>
+                  <span class="parameters">(Adelaide,Hotel Cornice,Super Deluxe,2,2,1,Lina,L,10 cross st,1232123412341234,MAST,3,2030,111)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.TS007_HomeScreenTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogout">
+                  </a> <!-- verifyLogout -->
+                  <span class="method-name">verifyLogout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.TS002_SearchHotelTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchHotelByAllDetails(London, Hotel Creek, Standard, 2, 2, 1)">
+                  </a> <!-- searchHotelByAllDetails(London, Hotel Creek, Standard, 2, 2, 1) -->
+                  <span class="method-name">searchHotelByAllDetails</span>
+                  <span class="parameters">(London,Hotel Creek,Standard,2,2,1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchHotelByAllDetails(Paris, Hotel Sunshine, Double, 2, 2, 1)">
+                  </a> <!-- searchHotelByAllDetails(Paris, Hotel Sunshine, Double, 2, 2, 1) -->
+                  <span class="method-name">searchHotelByAllDetails</span>
+                  <span class="parameters">(Paris,Hotel Sunshine,Double,2,2,1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchHotelbyDefaultDetails">
+                  </a> <!-- searchHotelbyDefaultDetails -->
+                  <span class="method-name">searchHotelbyDefaultDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyResetButton(Paris, Hotel Sunshine, Double, 2, 2, 1)">
+                  </a> <!-- verifyResetButton(Paris, Hotel Sunshine, Double, 2, 2, 1) -->
+                  <span class="method-name">verifyResetButton</span>
+                  <span class="parameters">(Paris,Hotel Sunshine,Double,2,2,1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyResetButton(London, Hotel Creek, Standard, 2, 2, 1)">
+                  </a> <!-- verifyResetButton(London, Hotel Creek, Standard, 2, 2, 1) -->
+                  <span class="method-name">verifyResetButton</span>
+                  <span class="parameters">(London,Hotel Creek,Standard,2,2,1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWelcomeText">
+                  </a> <!-- verifyWelcomeText -->
+                  <span class="method-name">verifyWelcomeText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.TS003_SelectHotelTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBackandCancelButton(Sydney, Hotel Creek, Double, 2, 2, 1)">
+                  </a> <!-- verifyBackandCancelButton(Sydney, Hotel Creek, Double, 2, 2, 1) -->
+                  <span class="method-name">verifyBackandCancelButton</span>
+                  <span class="parameters">(Sydney,Hotel Creek,Double,2,2,1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBackandCancelButton(Melbourne, Hotel Creek, Standard, 2, 2, 1)">
+                  </a> <!-- verifyBackandCancelButton(Melbourne, Hotel Creek, Standard, 2, 2, 1) -->
+                  <span class="method-name">verifyBackandCancelButton</span>
+                  <span class="parameters">(Melbourne,Hotel Creek,Standard,2,2,1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyContinueButton(Sydney, Hotel Creek, Double, 2, 2, 1)">
+                  </a> <!-- verifyContinueButton(Sydney, Hotel Creek, Double, 2, 2, 1) -->
+                  <span class="method-name">verifyContinueButton</span>
+                  <span class="parameters">(Sydney,Hotel Creek,Double,2,2,1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyContinueButton(Melbourne, Hotel Creek, Standard, 2, 2, 1)">
+                  </a> <!-- verifyContinueButton(Melbourne, Hotel Creek, Standard, 2, 2, 1) -->
+                  <span class="method-name">verifyContinueButton</span>
+                  <span class="parameters">(Melbourne,Hotel Creek,Standard,2,2,1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.TS001_LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidCredentials">
+                  </a> <!-- verifyInvalidCredentials -->
+                  <span class="method-name">verifyInvalidCredentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginBtnVisible">
+                  </a> <!-- verifyLoginBtnVisible -->
+                  <span class="method-name">verifyLoginBtnVisible</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyValidCredentials">
+                  </a> <!-- verifyValidCredentials -->
+                  <span class="method-name">verifyValidCredentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.TS004_BookHotelTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBookingByValidDetails(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)">
+                  </a> <!-- verifyBookingByValidDetails(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223) -->
+                  <span class="method-name">verifyBookingByValidDetails</span>
+                  <span class="parameters">(Brisbane,Hotel Hervey,Deluxe,2,2,1,Tina,T,18 cross st,1234123412341234,VISA,1,2028,223)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyBookingByValidDetails(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">
+                  </a> <!-- verifyBookingByValidDetails(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...) -->
+                  <span class="method-name">verifyBookingByValidDetails</span>
+                  <span class="parameters">(Adelaide,Hotel Cornice,Super Deluxe,2,2,1,Lina,L,10 cross st,1232123412341234,MAST,3,2030,111)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCancelButton(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">
+                  </a> <!-- verifyCancelButton(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...) -->
+                  <span class="method-name">verifyCancelButton</span>
+                  <span class="parameters">(Adelaide,Hotel Cornice,Super Deluxe,2,2,1,Lina,L,10 cross st,1232123412341234,MAST,3,2030,111)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCancelButton(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)">
+                  </a> <!-- verifyCancelButton(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223) -->
+                  <span class="method-name">verifyCancelButton</span>
+                  <span class="parameters">(Brisbane,Hotel Hervey,Deluxe,2,2,1,Tina,T,18 cross st,1234123412341234,VISA,1,2028,223)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyNonEditableFields(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)">
+                  </a> <!-- verifyNonEditableFields(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...) -->
+                  <span class="method-name">verifyNonEditableFields</span>
+                  <span class="parameters">(Adelaide,Hotel Cornice,Super Deluxe,2,2,1,Lina,L,10 cross st,1232123412341234,MAST,3,2030,111)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyNonEditableFields(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)">
+                  </a> <!-- verifyNonEditableFields(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223) -->
+                  <span class="method-name">verifyNonEditableFields</span>
+                  <span class="parameters">(Brisbane,Hotel Hervey,Deluxe,2,2,1,Tina,T,18 cross st,1234123412341234,VISA,1,2028,223)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPassingCreditCardNumber(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)">
+                  </a> <!-- verifyPassingCreditCardNumber(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223) -->
+                  <span class="method-name">verifyPassingCreditCardNumber</span>
+                  <span class="parameters">(Brisbane,Hotel Hervey,Deluxe,2,2,1,Tina,T,18 cross st,1234123412341234,VISA,1,2028,223)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPassingCvvNumber(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)">
+                  </a> <!-- verifyPassingCvvNumber(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223) -->
+                  <span class="method-name">verifyPassingCvvNumber</span>
+                  <span class="parameters">(Brisbane,Hotel Hervey,Deluxe,2,2,1,Tina,T,18 cross st,1234123412341234,VISA,1,2028,223)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.TS006_BookedItineraryTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCheckAllAndCancelSelected">
+                  </a> <!-- verifyCheckAllAndCancelSelected -->
+                  <span class="method-name">verifyCheckAllAndCancelSelected</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogout">
+                  </a> <!-- verifyLogout -->
+                  <span class="method-name">verifyLogout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchHotelButton">
+                  </a> <!-- verifySearchHotelButton -->
+                  <span class="method-name">verifySearchHotelButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchOrderId(76742AR22U, 2SRFOV3Y82)">
+                  </a> <!-- verifySearchOrderId(76742AR22U, 2SRFOV3Y82) -->
+                  <span class="method-name">verifySearchOrderId</span>
+                  <span class="parameters">(76742AR22U,2SRFOV3Y82)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;pageObjects.BasePage&quot;/&gt;
+      &lt;class name=&quot;pageObjects.BookedItineraryPage&quot;/&gt;
+      &lt;class name=&quot;pageObjects.BookHotelPage&quot;/&gt;
+      &lt;class name=&quot;pageObjects.BookingConfirmPage&quot;/&gt;
+      &lt;class name=&quot;pageObjects.HomePage&quot;/&gt;
+      &lt;class name=&quot;pageObjects.LogoutPage&quot;/&gt;
+      &lt;class name=&quot;pageObjects.SearchHotelPage&quot;/&gt;
+      &lt;class name=&quot;pageObjects.SelectHotelPage&quot;/&gt;
+      &lt;class name=&quot;repoConfig.TestReport&quot;/&gt;
+      &lt;class name=&quot;testBase.BaseClass&quot;/&gt;
+      &lt;class name=&quot;testCases.TS001_LoginTest&quot;/&gt;
+      &lt;class name=&quot;testCases.TS002_SearchHotelTest&quot;/&gt;
+      &lt;class name=&quot;testCases.TS003_SelectHotelTest&quot;/&gt;
+      &lt;class name=&quot;testCases.TS004_BookHotelTest&quot;/&gt;
+      &lt;class name=&quot;testCases.TS005_BookingConfirmTest&quot;/&gt;
+      &lt;class name=&quot;testCases.TS006_BookedItineraryTest&quot;/&gt;
+      &lt;class name=&quot;testCases.TS007_HomeScreenTest&quot;/&gt;
+      &lt;class name=&quot;utilities.BookingDetailsHelper&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (18 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(33);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyCancelOrder')
+data.setCell(0, 2, 'testCases.TS006_BookedItineraryTest')
+data.setCell(0, 3, 89768);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyCheckAllAndCancelSelected')
+data.setCell(1, 2, 'testCases.TS006_BookedItineraryTest')
+data.setCell(1, 3, 79172);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifySearchOrderId')
+data.setCell(2, 2, 'testCases.TS006_BookedItineraryTest')
+data.setCell(2, 3, 64720);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifySearchInvalidOrder')
+data.setCell(3, 2, 'testCases.TS006_BookedItineraryTest')
+data.setCell(3, 3, 52071);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyMyItinerary')
+data.setCell(4, 2, 'testCases.TS005_BookingConfirmTest')
+data.setCell(4, 3, 25622);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyLogout')
+data.setCell(5, 2, 'testCases.TS006_BookedItineraryTest')
+data.setCell(5, 3, 24826);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifySearchHotelButton')
+data.setCell(6, 2, 'testCases.TS006_BookedItineraryTest')
+data.setCell(6, 3, 15149);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifyChangePassword')
+data.setCell(7, 2, 'testCases.TS007_HomeScreenTest')
+data.setCell(7, 3, 14841);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifyLogoutButton')
+data.setCell(8, 2, 'testCases.TS005_BookingConfirmTest')
+data.setCell(8, 3, 12973);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifySearchHotelPage')
+data.setCell(9, 2, 'testCases.TS005_BookingConfirmTest')
+data.setCell(9, 3, 12640);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyPopulatedFields')
+data.setCell(10, 2, 'testCases.TS005_BookingConfirmTest')
+data.setCell(10, 3, 12568);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyBookingByValidDetails')
+data.setCell(11, 2, 'testCases.TS004_BookHotelTest')
+data.setCell(11, 3, 12179);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyBookingByValidDetails')
+data.setCell(12, 2, 'testCases.TS004_BookHotelTest')
+data.setCell(12, 3, 11194);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verifyCancelButton')
+data.setCell(13, 2, 'testCases.TS004_BookHotelTest')
+data.setCell(13, 3, 6114);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verifyCancelButton')
+data.setCell(14, 2, 'testCases.TS004_BookHotelTest')
+data.setCell(14, 3, 6024);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyPassingCvvNumber')
+data.setCell(15, 2, 'testCases.TS004_BookHotelTest')
+data.setCell(15, 3, 5533);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyPassingCreditCardNumber')
+data.setCell(16, 2, 'testCases.TS004_BookHotelTest')
+data.setCell(16, 3, 5081);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verifyBackandCancelButton')
+data.setCell(17, 2, 'testCases.TS003_SelectHotelTest')
+data.setCell(17, 3, 4484);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyNonEditableFields')
+data.setCell(18, 2, 'testCases.TS004_BookHotelTest')
+data.setCell(18, 3, 4336);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verifyBackandCancelButton')
+data.setCell(19, 2, 'testCases.TS003_SelectHotelTest')
+data.setCell(19, 3, 4252);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verifyNonEditableFields')
+data.setCell(20, 2, 'testCases.TS004_BookHotelTest')
+data.setCell(20, 3, 4142);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'verifyContinueButton')
+data.setCell(21, 2, 'testCases.TS003_SelectHotelTest')
+data.setCell(21, 3, 3781);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'verifyContinueButton')
+data.setCell(22, 2, 'testCases.TS003_SelectHotelTest')
+data.setCell(22, 3, 3278);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'searchHotelByAllDetails')
+data.setCell(23, 2, 'testCases.TS002_SearchHotelTest')
+data.setCell(23, 3, 2964);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'verifyLoginBtnVisible')
+data.setCell(24, 2, 'testCases.TS001_LoginTest')
+data.setCell(24, 3, 2572);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'verifyInvalidCredentials')
+data.setCell(25, 2, 'testCases.TS001_LoginTest')
+data.setCell(25, 3, 2358);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'verifyResetButton')
+data.setCell(26, 2, 'testCases.TS002_SearchHotelTest')
+data.setCell(26, 3, 2333);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'verifyValidCredentials')
+data.setCell(27, 2, 'testCases.TS001_LoginTest')
+data.setCell(27, 3, 2289);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'searchHotelByAllDetails')
+data.setCell(28, 2, 'testCases.TS002_SearchHotelTest')
+data.setCell(28, 3, 2197);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'verifyResetButton')
+data.setCell(29, 2, 'testCases.TS002_SearchHotelTest')
+data.setCell(29, 3, 1997);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'verifyLogout')
+data.setCell(30, 2, 'testCases.TS007_HomeScreenTest')
+data.setCell(30, 3, 631);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'searchHotelbyDefaultDetails')
+data.setCell(31, 2, 'testCases.TS002_SearchHotelTest')
+data.setCell(31, 3, 313);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'verifyWelcomeText')
+data.setCell(32, 2, 'testCases.TS002_SearchHotelTest')
+data.setCell(32, 3, 50);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 8 minutes</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">1 ignored method</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCases.TS006_BookedItineraryTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">verifyCancelSelected</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.TS001_LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">53730 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginBtnVisible</span>
+                <span class="method-start">54646 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">57218 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">68154 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">84019 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidCredentials</span>
+                <span class="method-start">84022 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">86380 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">93430 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">108158 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyValidCredentials</span>
+                <span class="method-start">108160 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">110451 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.TS002_SearchHotelTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">115936 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">160614 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyWelcomeText</span>
+                <span class="method-start">162848 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">162898 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">172238 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">184520 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchHotelByAllDetails(London, Hotel Creek, Standard, 2, 2, 1)</span>
+                <span class="method-start">186122 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">188319 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">194700 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">202106 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchHotelByAllDetails(Paris, Hotel Sunshine, Double, 2, 2, 1)</span>
+                <span class="method-start">202721 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">205685 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">207101 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">211158 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchHotelbyDefaultDetails</span>
+                <span class="method-start">214725 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">215039 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">215724 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">219270 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyResetButton(London, Hotel Creek, Standard, 2, 2, 1)</span>
+                <span class="method-start">222970 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">224967 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">225668 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">231870 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyResetButton(Paris, Hotel Sunshine, Double, 2, 2, 1)</span>
+                <span class="method-start">232745 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">235078 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.TS003_SelectHotelTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">235721 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setBeforeTest</span>
+                <span class="method-start">241093 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyContinueButton(Melbourne, Hotel Creek, Standard, 2, 2, 1)</span>
+                <span class="method-start">242128 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">245911 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">246551 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setBeforeTest</span>
+                <span class="method-start">252205 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyContinueButton(Sydney, Hotel Creek, Double, 2, 2, 1)</span>
+                <span class="method-start">253128 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">256408 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">257136 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setBeforeTest</span>
+                <span class="method-start">263580 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyBackandCancelButton(Melbourne, Hotel Creek, Standard, 2, 2, 1)</span>
+                <span class="method-start">264588 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">269072 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">269923 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setBeforeTest</span>
+                <span class="method-start">276268 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyBackandCancelButton(Sydney, Hotel Creek, Double, 2, 2, 1)</span>
+                <span class="method-start">277702 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">281954 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.TS004_BookHotelTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">285631 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">296297 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyBookingByValidDetails(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)</span>
+                <span class="method-start">296821 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">309000 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">310003 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">322123 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyBookingByValidDetails(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</span>
+                <span class="method-start">323636 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">334831 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">335678 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">342686 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyCancelButton(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)</span>
+                <span class="method-start">343130 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">349154 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">349734 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">358471 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyCancelButton(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</span>
+                <span class="method-start">360468 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">366586 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">369217 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">374947 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPassingCvvNumber(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)</span>
+                <span class="method-start">376244 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">381777 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">382321 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">388293 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPassingCreditCardNumber(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)</span>
+                <span class="method-start">389743 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">394824 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">395297 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">400743 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyNonEditableFields(Brisbane, Hotel Hervey, Deluxe, 2, 2, 1, Tina, T, 18 cross st, 1234123412341234, VISA, 1, 2028, 223)</span>
+                <span class="method-start">401291 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">405627 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">406273 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">411824 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyNonEditableFields(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</span>
+                <span class="method-start">412324 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">416466 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.TS005_BookingConfirmTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">417082 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">423289 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyPopulatedFields(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</span>
+                <span class="method-start">423770 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">436338 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">437132 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">442916 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyMyItinerary(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</span>
+                <span class="method-start">443393 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">469023 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">469837 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">475773 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchHotelPage(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</span>
+                <span class="method-start">477253 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">489893 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">490658 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">495747 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyLogoutButton(Adelaide, Hotel Cornice, Super Deluxe, 2, 2, 1, Lina, L, 10 cross st, 1232123412341234, MAST, 3, 203...)</span>
+                <span class="method-start">496234 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">509218 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.TS006_BookedItineraryTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">510053 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">515374 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchOrderId(76742AR22U, 2SRFOV3Y82)</span>
+                <span class="method-start">516875 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">581599 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">582300 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">588224 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyCancelOrder(76742AR22U, 2SRFOV3Y82)</span>
+                <span class="method-start">589674 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">679444 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">680336 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">686278 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifySearchInvalidOrder(adfgh, adsfdgh)</span>
+                <span class="method-start">687847 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">739920 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">740548 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">746497 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyCheckAllAndCancelSelected</span>
+                <span class="method-start">747984 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">827156 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">827883 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">834591 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchHotelButton</span>
+                <span class="method-start">836091 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">851240 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">852058 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">857578 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogout</span>
+                <span class="method-start">859449 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">884275 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.TS007_HomeScreenTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">885035 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">890462 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogout</span>
+                <span class="method-start">892002 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">892635 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">893268 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">899705 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyChangePassword</span>
+                <span class="method-start">900183 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">915024 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

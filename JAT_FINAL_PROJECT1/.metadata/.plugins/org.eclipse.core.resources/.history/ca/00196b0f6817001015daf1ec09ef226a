@@ -1,0 +1,141 @@
+package testCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import pageObjects.HomePage;
+import pageObjects.SearchHotelPage;
+import pageObjects.SelectHotelPage;
+import testBase.BaseClass;
+
+public class TS002_SearchHotelTest extends BaseClass {
+	
+	HomePage hp;
+	SearchHotelPage sp;
+	SelectHotelPage sl;
+	TS003_SelectHotelTest ts3;
+	
+	@BeforeMethod
+	public void setUp() throws IOException
+	{
+	FileReader fr=new FileReader(System.getProperty("user.dir")+ "\\src\\test\\resources\\config.properties");
+	Properties pr=new Properties();
+	pr.load(fr);
+	hp=new HomePage(BaseClass.driver);	
+	sp=new SearchHotelPage(BaseClass.driver);
+	sl=new SelectHotelPage(BaseClass.driver);
+	ts3=new TS003_SelectHotelTest();
+	hp.passCredentials(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
+	hp.clickLogin();
+	}
+	
+	@DataProvider(name="searchData")
+	public Object[][] bookingDetailsData()
+	{
+		Object[][] data= {{"London", "Hotel Creek", "Standard", "2", "2", "1"},
+				{"Paris", "Hotel Sunshine", "Double", "2", "2", "1"}};
+		return data;
+			
+		
+	}
+	
+	@Test(priority=1)
+	public void verifyWelcomeText()
+	{
+	if(sp.valWelcomeTxt.getAttribute("value").equals
+			("Hello divyasekar1234!"))
+	{
+		Assert.assertTrue(true);
+	}
+	else
+	{
+		takeScreenshot();
+		Assert.fail();
+	}
+	}
+	
+	@Test(priority=2, dataProvider ="searchData"  )
+	public void searchHotelByAllDetails(String location, String hotelName, String roomType, String noOfrooms, String numOfadults, String noOfChild)
+	{
+		sp.selectOptions(sp.dropdownLocation, "Melbourne");
+		sp.selectOptions(sp.dropdownHotels, "Hotel Creek");
+		sp.selectOptions(sp.dropdownRoomTypes, "Standard");
+		sp.selectOptions(sp.dropdownRoomNos, "2");
+		//sp.passCheckinDate("12/04/2025");
+		//sp.passCheckoutDate("15/04/2025");
+		sp.selectOptions(sp.dropdownAdultsPerRoom, "2");
+		sp.selectOptions(sp.dropdownChildPerRoom, "1");
+		sp.clickSubmitBtn();		
+		if(driver.getCurrentUrl().contains("SelectHotel.php"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+		
+		sl.clickCancel();
+		
+	}
+	
+	@Test(priority=3)
+	public void searchHotelbyDefaultDetails()
+	{
+		sp.clickSubmitBtn();
+		
+		if(sp.getErrorLocation().equals("Please Select a Location"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+		
+	}
+	
+	@Test(priority=4)
+	public void verifyResetButton()
+	{
+
+		sp.selectOptions(sp.dropdownLocation, "Melbourne");
+		sp.selectOptions(sp.dropdownHotels, "Hotel Creek");
+		sp.selectOptions(sp.dropdownRoomTypes, "Standard");
+		sp.selectOptions(sp.dropdownRoomNos, "2");
+		//sp.passCheckinDate("12/04/2025");
+		//sp.passCheckoutDate("15/04/2025");
+		sp.selectOptions(sp.dropdownAdultsPerRoom, "2");
+		sp.selectOptions(sp.dropdownChildPerRoom, "1");
+		sp.clickResetBtn();
+		
+		Select select=new Select(sp.dropdownLocation);
+		
+		if(select.getFirstSelectedOption().getText().equals("- Select Location -"))
+		{
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			takeScreenshot();
+			Assert.fail();
+		}
+	}
+	
+	    @AfterClass
+	    public void tearDown()
+	    {
+	    	driver.quit();
+	    }
+
+}

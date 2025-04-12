@@ -1,0 +1,91 @@
+package testCases;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import pageObjects.BookHotelPage;
+import pageObjects.HomePage;
+import pageObjects.SearchHotelPage;
+import pageObjects.SelectHotelPage;
+import testBase.BaseClass;
+
+public class TS003_SelectHotelTest extends BaseClass{
+	
+	HomePage hp;
+	SearchHotelPage sp;
+	SelectHotelPage sl;
+	BookHotelPage bp;
+	@BeforeClass
+	public void setUp() throws IOException
+	{
+		FileReader fr=new FileReader(System.getProperty("user.dir")+ "\\src\\test\\resources\\config.properties");
+		Properties pr=new Properties();
+		pr.load(fr);
+		hp=new HomePage(BaseClass.driver);
+		sp=new SearchHotelPage(BaseClass.driver);
+		sl=new SelectHotelPage(BaseClass.driver);
+		bp=new BookHotelPage(BaseClass.driver);
+		hp.passCredentials(pr.getProperty("USERNAME"), pr.getProperty("PASSWORD"));
+		hp.clickLogin();
+		
+	}
+	
+	@DataProvider(name="bookingdata")
+	public Object[][] bookingDetailsData()
+	{
+		Object[][] data= {{"Melbourne", "Hotel Creek", "Standard", "2", "2", "1"},
+				{"Sydney", "Hotel Creek", "Double", "2", "2", "1"}};
+		return data;
+			
+		
+	}
+	
+	@Test(priority=1, dataProvider = "bookingdata")
+	public void verifyContinueButton(String location, String hotelName, String roomType, String noOfrooms, String numOfadults, String noOfChild)
+	{
+		sp.selectOptions(sp.dropdownLocation, "Melbourne");
+		sp.selectOptions(sp.dropdownHotels, "Hotel Creek");
+		sp.selectOptions(sp.dropdownRoomTypes, "Standard");
+		sp.selectOptions(sp.dropdownRoomNos, "2");
+		//sp.passCheckinDate("12/04/2025");
+		//sp.passCheckoutDate("15/04/2025");
+		sp.selectOptions(sp.dropdownAdultsPerRoom, "2");
+		sp.selectOptions(sp.dropdownChildPerRoom, "1");
+		sp.clickSubmitBtn();	
+		int size=sl.radioListedHotels.size();
+		if(size>0)
+		{
+			sl.selectHotel(size-1, sl.radioListedHotels);
+		    sl.clickContinue();
+		    if(driver.getCurrentUrl().contains("BookHotel.php"))
+		    {
+		    	Assert.assertTrue(true);
+		    }
+		    else
+		    {
+		    	takeScreenshot();
+		    	Assert.fail();
+		    }
+		}
+		else
+		{
+			logger.info("Not able to proceed with testcase verifyContinue since no  hotels found with the applied condition");
+		}
+		
+		
+	}
+	
+	@Test(priority=2)
+	public void verifyBackandCancelButton()
+	{
+		bp.clickBackButton();
+		sl.clickCancel();
+	}
+
+}

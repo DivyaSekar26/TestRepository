@@ -1,0 +1,40 @@
+package pageObjects;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class SelectHotelPage extends BasePage{
+
+	public SelectHotelPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@FindBy(xpath="//input[@type='radio']")
+	public List<WebElement> radioListedHotels;
+	
+	@FindBy(id="continue")
+	public WebElement btnContinue;
+	
+	@FindBy(id="cancel")
+	public WebElement btnCancel;
+	
+	
+	public void selectHotel(int i, List<WebElement> element)
+	{
+		element.get(i).click();
+	}
+	
+	public void clickContinue()
+	{
+		btnContinue.click();
+	}
+
+	public void clickCancel()
+	{
+		btnCancel.click();
+	}
+}
